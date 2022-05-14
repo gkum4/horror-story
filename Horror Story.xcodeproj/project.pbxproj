@@ -14,6 +14,7 @@
 		0C0EF1402822AF580067416B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF13F2822AF580067416B /* Assets.xcassets */; };
 		0C0EF1432822AF580067416B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF1412822AF580067416B /* LaunchScreen.storyboard */; };
 		0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */; };
+		0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */; };
 		0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		0C0EF1422822AF580067416B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C0EF1442822AF580067416B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterHandler.swift; sourceTree = "<group>"; };
+		0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterButton.swift; sourceTree = "<group>"; };
 		0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			children = (
 				0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */,
 				0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */,
+				0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */,
 			);
 			path = CameraFilter;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */,
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
+				0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */,
 				0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

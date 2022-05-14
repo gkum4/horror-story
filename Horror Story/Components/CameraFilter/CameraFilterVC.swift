@@ -9,11 +9,13 @@ import UIKit
 import AVFoundation
 
 class CameraFilterVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    lazy var imageView: UIImageView = {
-        return UIImageView(frame: self.view.frame)
+    private lazy var imageView: UIImageView = {
+        let iv = UIImageView(frame: self.view.frame)
+        iv.contentMode = .scaleAspectFit
+        return iv
     }()
     
-    lazy var previewLayer: AVCaptureVideoPreviewLayer = {
+    private lazy var previewLayer: AVCaptureVideoPreviewLayer = {
         let preview = AVCaptureVideoPreviewLayer(
             session: captureSession
         )
@@ -27,6 +29,29 @@ class CameraFilterVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     private let captureSession = AVCaptureSession()
     
     private lazy var filterHandler = CameraFilterHandler()
+    
+    private lazy var sepiaToneFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .sepiaTone
+    )
+    private lazy var darkScratchesFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .darkScratches
+    )
+    private lazy var whiteSpecksFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .whiteSpecks
+    )
+    private lazy var colorInvertFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .colorInvert
+    )
+    private lazy var filterButtons: [ApplyFilterButton] = [
+        sepiaToneFilterButton,
+        darkScratchesFilterButton,
+        whiteSpecksFilterButton,
+        colorInvertFilterButton
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +73,45 @@ class CameraFilterVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         stopCamera()
     }
     
-//    override var prefersStatusBarHidden: Bool {
-//        return true
-//    }
-    
-//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//        return .portrait
-//    }
-    
     private func setupSubViews() {
         self.view.addSubview(imageView)
+        filterButtons.forEach({ self.view.addSubview($0) })
+        
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
+        let firstButtonConstraints: [NSLayoutConstraint] = [
+            filterButtons[0].topAnchor.constraint(
+                equalTo: self.view.topAnchor,
+                constant: 50
+            ),
+            filterButtons[0].leadingAnchor.constraint(
+                equalTo: self.view.leadingAnchor,
+                constant: 20
+            )
+        ]
+        NSLayoutConstraint.activate(firstButtonConstraints)
+        
+        for (i, filterButton) in filterButtons.enumerated() {
+            filterButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            if i == 0 {
+                continue
+            }
+            
+            let buttonConstraints: [NSLayoutConstraint] = [
+                filterButton.topAnchor.constraint(
+                    equalTo: filterButtons[i-1].bottomAnchor,
+                    constant: 20
+                ),
+                filterButton.leadingAnchor.constraint(
+                    equalTo: self.view.leadingAnchor,
+                    constant: 20
+                )
+            ]
+            NSLayoutConstraint.activate(buttonConstraints)
+        }
     }
     
     private func startCamera() {
