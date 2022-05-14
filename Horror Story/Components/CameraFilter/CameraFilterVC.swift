@@ -46,11 +46,20 @@ class CameraFilterVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         cameraFilterHandler: filterHandler,
         filter: .colorInvert
     )
+    private lazy var redIncreaseFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .redIncrease
+    )
+    private lazy var bloomFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .bloom
+    )
     private lazy var filterButtons: [ApplyFilterButton] = [
         sepiaToneFilterButton,
         darkScratchesFilterButton,
         whiteSpecksFilterButton,
-        colorInvertFilterButton
+        colorInvertFilterButton,
+        bloomFilterButton
     ]
     
     override func viewDidLoad() {

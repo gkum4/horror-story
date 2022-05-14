@@ -24,6 +24,10 @@ class CameraFilterHandler {
                 finalImage = applyWhiteSpecksFilter(to: finalImage)
             case .colorInvert:
                 finalImage = applyColorInvertFilter(to: finalImage)
+            case .redIncrease:
+                finalImage = applyRedIncreaseFilter(to: finalImage)
+            case .bloom:
+                finalImage = applyBloomFilter(to: finalImage)
             }
         }
         
@@ -35,6 +39,8 @@ class CameraFilterHandler {
         case darkScratches = "Dark Scratches"
         case whiteSpecks = "White Specks"
         case colorInvert = "Color Invert"
+        case redIncrease = "Red Increase"
+        case bloom = "Bloom"
     }
     
     private func applySepiaToneFilter(to image: CIImage) -> CIImage {
@@ -141,7 +147,45 @@ class CameraFilterHandler {
         return colorInvertedImage
     }
     
-    private func apply
+    private func applyRedIncreaseFilter(to image: CIImage) -> CIImage {
+//        let colorMatrixFilter = CIFilter.colorMatrix()
+//        colorMatrixFilter.inputImage = image
+//        colorMatrixFilter.rVector = CIVector(x: 1, y: 0, z: 0, w: 0)
+//        colorMatrixFilter.gVector = CIVector(x: 1, y: 1, z: 0, w: 0)
+//        colorMatrixFilter.bVector = CIVector(x: 1, y: 0, z: 1, w: 0)
+//
+//        guard let filteredImage = colorMatrixFilter.outputImage else {
+//            print("Error generating filteredImage")
+//            return CIImage()
+//        }
+//
+//        return filteredImage
+        
+        let colorClampFilter = CIFilter.colorClamp()
+        colorClampFilter.inputImage = image
+        colorClampFilter.minComponents = CIVector(x: 0, y: 0, z: 0, w: 0)
+        colorClampFilter.maxComponents = CIVector(x: 1, y: 0.3, z: 0.3, w: 1)
+
+        guard let colorClampedImage = colorClampFilter.outputImage else {
+            print("Error generating colorClampedImage")
+            return CIImage()
+        }
+
+        return colorClampedImage
+    }
+    
+    private func applyBloomFilter(to image: CIImage) -> CIImage {
+        let bloomFilter = CIFilter.bloom()
+        bloomFilter.inputImage = image
+        bloomFilter.intensity = 0.8
+        
+        guard let bloomedImage = bloomFilter.outputImage else {
+            print("Error generating bloomedImage")
+            return CIImage()
+        }
+        
+        return bloomedImage
+    }
     
     private func getNoiseImage() -> CIImage {
         let noiseFilter = CIFilter.randomGenerator()
