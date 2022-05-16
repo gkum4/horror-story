@@ -17,6 +17,7 @@
 		0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */; };
 		0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */; };
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
+		B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterButton.swift; sourceTree = "<group>"; };
 		0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterVC.swift; sourceTree = "<group>"; };
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
+		B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				0C0EF1362822AF560067416B /* AppDelegate.swift */,
 				0C0EF1382822AF560067416B /* SceneDelegate.swift */,
 				0C0EF13A2822AF560067416B /* ViewController.swift */,
+				B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */,
 				0C0EF13C2822AF560067416B /* Main.storyboard */,
 				0C0EF13F2822AF580067416B /* Assets.xcassets */,
 				0C0EF1412822AF580067416B /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 				0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */,
 				0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */,
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
+				B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
 				0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */,
 				0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */,
