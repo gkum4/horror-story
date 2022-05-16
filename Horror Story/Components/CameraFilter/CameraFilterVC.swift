@@ -7,29 +7,17 @@
 
 import UIKit
 import AVFoundation
+import RealityKit
 
-class CameraFilterVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    private lazy var imageView: UIImageView = {
-        let iv = UIImageView(frame: self.view.frame)
-        iv.contentMode = .scaleAspectFit
-        return iv
-    }()
+class CameraFilterVC: UIViewController {
+    private lazy var arView = ARView(
+        frame: view.frame,
+        cameraMode: .ar,
+        automaticallyConfigureSession: true
+    )
     
-    private lazy var previewLayer: AVCaptureVideoPreviewLayer = {
-        let preview = AVCaptureVideoPreviewLayer(
-            session: captureSession
-        )
-        
-        preview.videoGravity = .resizeAspectFill
-        preview.frame = self.view.frame
-        
-        return preview
-    }()
-    private let videoDataOutput = AVCaptureVideoDataOutput()
-    private let captureSession = AVCaptureSession()
-    
+    private var filtersCIContext: CIContext?
     private lazy var filterHandler = CameraFilterHandler()
-    
     private lazy var sepiaToneFilterButton = ApplyFilterButton(
         cameraFilterHandler: filterHandler,
         filter: .sepiaTone
@@ -54,36 +42,43 @@ class CameraFilterVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         cameraFilterHandler: filterHandler,
         filter: .bloom
     )
+    private lazy var noirFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .noir
+    )
+    private lazy var blinkFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .blink
+    )
+    private lazy var colorGlitchFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .colorGlitch
+    )
+    private lazy var pixellateFilterButton = ApplyFilterButton(
+        cameraFilterHandler: filterHandler,
+        filter: .pixellate
+    )
     private lazy var filterButtons: [ApplyFilterButton] = [
         sepiaToneFilterButton,
         darkScratchesFilterButton,
         whiteSpecksFilterButton,
         colorInvertFilterButton,
-        bloomFilterButton
+        redIncreaseFilterButton,
+        bloomFilterButton,
+        noirFilterButton,
+        blinkFilterButton,
+        colorGlitchFilterButton,
+        pixellateFilterButton
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupARView()
         self.setupSubViews()
-        self.setCameraInput()
-        self.setCameraOutput()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        previewLayer.frame = self.view.bounds
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        startCamera()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        stopCamera()
     }
     
     private func setupSubViews() {
-        self.view.addSubview(imageView)
+        view.addSubview(arView)
         filterButtons.forEach({ self.view.addSubview($0) })
         
         setupConstraints()
@@ -123,80 +118,35 @@ class CameraFilterVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
-    private func startCamera() {
-        videoDataOutput.setSampleBufferDelegate(
-            self,
-            queue: DispatchQueue(label: "camera_frame_processing_queue")
+    private func setupARView() {
+        setupCameraFilters()
+    }
+    
+    private func setupCameraFilters() {
+        arView.renderCallbacks.prepareWithDevice = { device in
+            self.filtersCIContext = CIContext(mtlDevice: device)
+        }
+        arView.renderCallbacks.postProcess = postProcessWithCoreImage
+    }
+    
+    private func postProcessWithCoreImage(context: ARView.PostProcessContext) {
+        guard let frameImage = CIImage(mtlTexture: context.sourceColorTexture) else {
+            fatalError("Unable to create a CIImage from sourceColorTexture.")
+        }
+        
+        let filteredImage = filterHandler.applyFilter(image: frameImage)
+
+        // Create a render destination and render the filter to the context's command buffer.
+        let destination = CIRenderDestination(
+            mtlTexture: context.compatibleTargetTexture,
+            commandBuffer: context.commandBuffer
         )
-        captureSession.startRunning()
-    }
-    
-    private func stopCamera() {
-        videoDataOutput.setSampleBufferDelegate(nil, queue: nil)
-        captureSession.stopRunning()
-    }
-    
-    private func setCameraInput() {
-        guard let device = AVCaptureDevice.DiscoverySession(
-            deviceTypes: [.builtInWideAngleCamera],
-            mediaType: .video,
-            position: .back
-        ).devices.first else {
-            fatalError("No back camera device found.")
-        }
-
-        let videoInput: AVCaptureDeviceInput
-
-        do {
-            videoInput = try AVCaptureDeviceInput(device: device)
-        } catch {
-            print("Failed to load video input")
-            return
-        }
-
-        if (captureSession.canAddInput(videoInput)) {
-            captureSession.addInput(videoInput)
-        } else {
-            print("Could not add videoInput to captureSession")
-        }
-    }
-    
-    func setCameraOutput() {
-        videoDataOutput.alwaysDiscardsLateVideoFrames = true
-
-        videoDataOutput.setSampleBufferDelegate(
-            self,
-            queue: DispatchQueue(label: "camera_frame_processing_queue")
-        )
-
-        captureSession.addOutput(videoDataOutput)
-
-        guard let connection = videoDataOutput.connection(
-            with: AVMediaType.video
-        ), connection.isVideoOrientationSupported else {
-            return
-        }
-        connection.videoOrientation = .portrait
-    }
-    
-    // MARK: AVCaptureVideo Delegate
-    func captureOutput(
-        _ output: AVCaptureOutput,
-        didOutput sampleBuffer: CMSampleBuffer,
-        from connection: AVCaptureConnection
-    ) {
-        let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+        destination.isFlipped = false
         
-        guard let pixelBuffer = pixelBuffer else {
-            return
-        }
-        let cameraImage = CIImage(cvPixelBuffer: pixelBuffer)
-        
-        let filteredImage = filterHandler.applyFilter(image: cameraImage)
-        
-        DispatchQueue.main.async {
-            self.imageView.image = UIImage(ciImage: filteredImage)
+        guard let ciContext = self.filtersCIContext else {
+            fatalError("Error in setup of ciContext.")
         }
         
+        _ = try? ciContext.startTask(toRender: filteredImage, to: destination)
     }
 }

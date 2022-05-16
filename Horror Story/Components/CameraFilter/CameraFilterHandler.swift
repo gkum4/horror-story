@@ -28,6 +28,14 @@ class CameraFilterHandler {
                 finalImage = applyRedIncreaseFilter(to: finalImage)
             case .bloom:
                 finalImage = applyBloomFilter(to: finalImage)
+            case .noir:
+                finalImage = applyNoirFilter(to: finalImage)
+            case .blink:
+                finalImage = applyBlinkFilter(to: finalImage)
+            case .colorGlitch:
+                finalImage = applyColorGlitchFilter(to: finalImage)
+            case .pixellate:
+                finalImage = applyPixellateFilter(to: finalImage)
             }
         }
         
@@ -41,11 +49,15 @@ class CameraFilterHandler {
         case colorInvert = "Color Invert"
         case redIncrease = "Red Increase"
         case bloom = "Bloom"
+        case noir = "Noir"
+        case blink = "Blink"
+        case colorGlitch = "Color Glitch"
+        case pixellate = "Pixellate"
     }
     
     private func applySepiaToneFilter(to image: CIImage) -> CIImage {
         let filter = CIFilter.sepiaTone()
-        filter.intensity = 1
+        filter.intensity = 0.8
         filter.inputImage = image
         
         guard let outputImage = filter.outputImage else {
@@ -148,19 +160,6 @@ class CameraFilterHandler {
     }
     
     private func applyRedIncreaseFilter(to image: CIImage) -> CIImage {
-//        let colorMatrixFilter = CIFilter.colorMatrix()
-//        colorMatrixFilter.inputImage = image
-//        colorMatrixFilter.rVector = CIVector(x: 1, y: 0, z: 0, w: 0)
-//        colorMatrixFilter.gVector = CIVector(x: 1, y: 1, z: 0, w: 0)
-//        colorMatrixFilter.bVector = CIVector(x: 1, y: 0, z: 1, w: 0)
-//
-//        guard let filteredImage = colorMatrixFilter.outputImage else {
-//            print("Error generating filteredImage")
-//            return CIImage()
-//        }
-//
-//        return filteredImage
-        
         let colorClampFilter = CIFilter.colorClamp()
         colorClampFilter.inputImage = image
         colorClampFilter.minComponents = CIVector(x: 0, y: 0, z: 0, w: 0)
@@ -187,6 +186,95 @@ class CameraFilterHandler {
         return bloomedImage
     }
     
+    private func applyNoirFilter(to image: CIImage) -> CIImage {
+        let noirFilter = CIFilter.photoEffectNoir()
+        noirFilter.inputImage = image
+        
+        guard let noiredImage = noirFilter.outputImage else {
+            print("Error generating bloomedImage")
+            return CIImage()
+        }
+        
+        return noiredImage
+    }
+    
+    private func applyBlinkFilter(to image: CIImage) -> CIImage {
+        let blinkFilter = CIFilter.colorClamp()
+        blinkFilter.inputImage = image
+        blinkFilter.minComponents = CIVector(x: 0, y: 0, z: 0, w: 0)
+        blinkFilter.maxComponents = CIVector(x: 1, y: 1, z: 1, w: CGFloat.random(in: 0...0.5))
+
+        guard let blinkedImage = blinkFilter.outputImage else {
+            print("Error generating blinkedImage")
+            return CIImage()
+        }
+        
+        return blinkedImage
+    }
+    
+    private func applyColorGlitchFilter(to image: CIImage) -> CIImage {
+        let colorGlitchFilter = CIFilter.colorClamp()
+        colorGlitchFilter.inputImage = image
+        colorGlitchFilter.minComponents = CIVector(x: 0, y: 0, z: 0, w: 0)
+        colorGlitchFilter.maxComponents = CIVector(
+            x: CGFloat.random(in: 0...1),
+            y: CGFloat.random(in: 0...1),
+            z: CGFloat.random(in: 0...1),
+            w: CGFloat.random(in: 0...1)
+        )
+        guard var colorGlitchedImage1 = colorGlitchFilter.outputImage else {
+            print("Error generating colorGlitchedImage1")
+            return CIImage()
+        }
+        
+        colorGlitchFilter.minComponents = CIVector(x: 0, y: 0, z: 0, w: 0)
+        colorGlitchFilter.maxComponents = CIVector(
+            x: CGFloat.random(in: 0...1),
+            y: CGFloat.random(in: 0...1),
+            z: CGFloat.random(in: 0...1),
+            w: CGFloat.random(in: 0...1)
+        )
+        guard var colorGlitchedImage2 = colorGlitchFilter.outputImage else {
+            print("Error generating colorGlitchedImage2")
+            return CIImage()
+        }
+        
+        colorGlitchedImage1 = colorGlitchedImage1.transformed(by: CGAffineTransform(scaleX: 1.1, y: 1)).transformed(by: CGAffineTransform(translationX: CGFloat.random(in: (-120)...(-30)), y: 0))
+        colorGlitchedImage2 = colorGlitchedImage2.transformed(by: CGAffineTransform(scaleX: 1.1, y: 1)).transformed(by: CGAffineTransform(translationX: CGFloat.random(in: (-120)...(-30)), y: 0))
+        
+        let additionCompositingFilter = CIFilter.additionCompositing()
+        additionCompositingFilter.inputImage = colorGlitchedImage1
+        additionCompositingFilter.backgroundImage = image
+        
+        guard let prefinalImage = additionCompositingFilter.outputImage else {
+            print("Error generating prefinalImage")
+            return CIImage()
+        }
+        
+        additionCompositingFilter.inputImage = colorGlitchedImage2
+        additionCompositingFilter.backgroundImage = prefinalImage
+        
+        guard let finalImage = additionCompositingFilter.outputImage else {
+            print("Error generating finalImage")
+            return CIImage()
+        }
+        
+        return finalImage
+    }
+    
+    private func applyPixellateFilter(to image: CIImage) -> CIImage {
+        let pixellateFilter = CIFilter.pixellate()
+        pixellateFilter.inputImage = image
+        pixellateFilter.scale = Float.random(in: 8...40)
+        
+        guard let pixellatedImage = pixellateFilter.outputImage else {
+            print("Error generating pixellatedImage")
+            return CIImage()
+        }
+        
+        return pixellatedImage
+    }
+    
     private func getNoiseImage() -> CIImage {
         let noiseFilter = CIFilter.randomGenerator()
         guard let noiseImage = noiseFilter.outputImage else {
@@ -195,5 +283,22 @@ class CameraFilterHandler {
         }
         
         return noiseImage
+    }
+    
+    private func getBlackImage() -> CIImage {
+        return CIImage(color: .black)
+    }
+    
+    private func getStackedImage(front frontImage: CIImage, back backImage: CIImage) -> CIImage {
+        let overCompostingFilter = CIFilter.sourceOverCompositing()
+        overCompostingFilter.inputImage = frontImage
+        overCompostingFilter.backgroundImage = backImage
+        
+        guard let stackedImage = overCompostingFilter.outputImage else {
+            print("Error generating stackedImage")
+            return CIImage()
+        }
+        
+        return stackedImage
     }
 }

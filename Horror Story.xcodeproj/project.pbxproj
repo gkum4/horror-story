@@ -16,6 +16,7 @@
 		0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */; };
 		0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */; };
 		0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */; };
+		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterHandler.swift; sourceTree = "<group>"; };
 		0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterButton.swift; sourceTree = "<group>"; };
 		0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterVC.swift; sourceTree = "<group>"; };
+		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */,
 				0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */,
 				0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */,
+				0CB34BE02832C75F0046F4DC /* RealityKit+.swift */,
 			);
 			path = CameraFilter;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C0EF13B2822AF560067416B /* ViewController.swift in Sources */,
+				0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */,
 				0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */,
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
@@ -324,6 +328,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +358,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
