@@ -74,7 +74,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         if speech.contains("sair") {
             if startedHorror {
                 exitLabel.textColor = .red
-                exitLabel.text = "SE FODEU"
+                exitLabel.text = "VOCÊ ESTÁ PRESO"
                 exitLabel.font = .systemFont(ofSize: 30)
                 return
             }
