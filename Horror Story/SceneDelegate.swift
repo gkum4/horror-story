@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //2
         window?.windowScene = windowScene
         //3
-        window?.rootViewController = RealityKitTestViewController()
+        window?.rootViewController = ViewController()
         //4
         window?.makeKeyAndVisible()
     }

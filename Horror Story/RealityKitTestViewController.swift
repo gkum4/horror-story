@@ -55,6 +55,7 @@ class  RealityKitTestViewController: UIViewController {
         do {
             let boxAnchor = try HorrorSceneTest.loadBox()
             arView.scene.anchors.append(boxAnchor)
+            print("carregou")
             // ...
         } catch {
             // handle error

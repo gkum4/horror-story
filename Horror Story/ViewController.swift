@@ -70,6 +70,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         if speech.contains("consequências") {
             cameraView.applyGlitch()
             label.text = "Diga: \"Me mostre a verdade\""
+//            cameraView.loadScene()
             return
         }
         

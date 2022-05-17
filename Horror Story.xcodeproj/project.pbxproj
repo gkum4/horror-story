@@ -18,7 +18,6 @@
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
 		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
 		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
-		B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */; };
 		B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F17972831BF660048D58D /* RealityKitTestViewController.swift */; };
 		B21F179A2831CAB00048D58D /* som1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B21F17992831CAB00048D58D /* som1.wav */; };
 		B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */; };
@@ -28,6 +27,7 @@
 		B21F17F728332E7E0048D58D /* bebe chorando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F128332E7D0048D58D /* bebe chorando.mp3 */; };
 		B21F17F828332E7E0048D58D /* zumbi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F228332E7D0048D58D /* zumbi.mp3 */; };
 		B21F17F928332E7E0048D58D /* nooooo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F328332E7E0048D58D /* nooooo.mp3 */; };
+		B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,6 @@
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
 		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
-		B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewController.swift; sourceTree = "<group>"; };
 		B21F17972831BF660048D58D /* RealityKitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitTestViewController.swift; sourceTree = "<group>"; };
 		B21F17992831CAB00048D58D /* som1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = som1.wav; sourceTree = "<group>"; };
 		B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = HorrorSceneTest.rcproject; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		B21F17F128332E7D0048D58D /* bebe chorando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bebe chorando.mp3"; sourceTree = "<group>"; };
 		B21F17F228332E7D0048D58D /* zumbi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zumbi.mp3; sourceTree = "<group>"; };
 		B21F17F328332E7E0048D58D /* nooooo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nooooo.mp3; sourceTree = "<group>"; };
+		B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,6 @@
 				0C0EF1382822AF560067416B /* SceneDelegate.swift */,
 				0C0EF13A2822AF560067416B /* ViewController.swift */,
 				B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */,
-				0C0EF13C2822AF560067416B /* Main.storyboard */,
 				B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */,
 				B21F17972831BF660048D58D /* RealityKitTestViewController.swift */,
 				B21F17992831CAB00048D58D /* som1.wav */,
@@ -396,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L5C36X97NN;
+				DEVELOPMENT_TEAM = AZA2LHKU7Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
@@ -427,7 +426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L5C36X97NN;
+				DEVELOPMENT_TEAM = AZA2LHKU7Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";

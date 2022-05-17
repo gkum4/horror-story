@@ -28,6 +28,7 @@ class CameraView: ARView {
             self.filtersCIContext = CIContext(mtlDevice: device)
         }
         self.renderCallbacks.postProcess = postProcessARViewFrames
+        loadScene()
     }
     
     @MainActor required dynamic init?(coder decoder: NSCoder) {
@@ -100,6 +101,17 @@ class CameraView: ARView {
     
     func removeAllFilters() {
         filterHandler.filtersToApply = []
+    }
+    
+    func loadScene() {
+        do {
+            let boxAnchor = try HorrorSceneTest.loadBox()
+            self.scene.anchors.append(boxAnchor)
+            print("carregou")
+        } catch {
+            // handle error
+        }
+        
     }
     
     private func postProcessARViewFrames(context: ARView.PostProcessContext) {
