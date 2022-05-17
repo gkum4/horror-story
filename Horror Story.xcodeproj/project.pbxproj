@@ -17,6 +17,8 @@
 		0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */; };
 		0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */; };
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
+		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
+		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
 		B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterButton.swift; sourceTree = "<group>"; };
 		0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterVC.swift; sourceTree = "<group>"; };
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
+		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +70,7 @@
 		0C0EF1352822AF560067416B /* Horror Story */ = {
 			isa = PBXGroup;
 			children = (
+				0CB34C09283320D80046F4DC /* Utils */,
 				0CA09268282BE4E9005F63FB /* Components */,
 				0C0EF1362822AF560067416B /* AppDelegate.swift */,
 				0C0EF1382822AF560067416B /* SceneDelegate.swift */,
@@ -82,6 +87,7 @@
 		0CA09268282BE4E9005F63FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0CB34C062833177B0046F4DC /* CameraView */,
 				0CA09269282BE4F0005F63FB /* CameraFilter */,
 			);
 			path = Components;
@@ -91,11 +97,51 @@
 			isa = PBXGroup;
 			children = (
 				0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */,
-				0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */,
 				0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */,
-				0CB34BE02832C75F0046F4DC /* RealityKit+.swift */,
 			);
 			path = CameraFilter;
+			sourceTree = "<group>";
+		};
+		0CB34C062833177B0046F4DC /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				0CB34C072833178A0046F4DC /* CameraView.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		0CB34C09283320D80046F4DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0CB34C0E283321780046F4DC /* SpeechRecognizer */,
+				0CB34C0D283321080046F4DC /* CameraFilterHandler */,
+				0CB34C0C283320FE0046F4DC /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0CB34C0C283320FE0046F4DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CB34BE02832C75F0046F4DC /* RealityKit+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0CB34C0D283321080046F4DC /* CameraFilterHandler */ = {
+			isa = PBXGroup;
+			children = (
+				0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */,
+			);
+			path = CameraFilterHandler;
+			sourceTree = "<group>";
+		};
+		0CB34C0E283321780046F4DC /* SpeechRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */,
+			);
+			path = SpeechRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +218,9 @@
 				0C0EF13B2822AF560067416B /* ViewController.swift in Sources */,
 				0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */,
 				0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */,
+				0CB34C082833178A0046F4DC /* CameraView.swift in Sources */,
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
+				0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */,
 				B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
 				0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */,
@@ -326,7 +374,9 @@
 				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = NSCameraUsageDescription;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -356,7 +406,9 @@
 				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = NSCameraUsageDescription;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

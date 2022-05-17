@@ -36,6 +36,8 @@ class CameraFilterHandler {
                 finalImage = applyColorGlitchFilter(to: finalImage)
             case .pixellate:
                 finalImage = applyPixellateFilter(to: finalImage)
+            case .negativeBlink:
+                finalImage = applyNegativeBlinkFilter(to: finalImage)
             }
         }
         
@@ -53,6 +55,7 @@ class CameraFilterHandler {
         case blink = "Blink"
         case colorGlitch = "Color Glitch"
         case pixellate = "Pixellate"
+        case negativeBlink = "Negative Blink"
     }
     
     private func applySepiaToneFilter(to image: CIImage) -> CIImage {
@@ -273,6 +276,16 @@ class CameraFilterHandler {
         }
         
         return pixellatedImage
+    }
+    
+    private func applyNegativeBlinkFilter(to image: CIImage) -> CIImage {
+        let randValue = Int.random(in: 1...10)
+        
+        if randValue <= 5 {
+            return applyColorInvertFilter(to: image)
+        }
+        
+        return image
     }
     
     private func getNoiseImage() -> CIImage {
