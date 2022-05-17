@@ -132,6 +132,9 @@ class CameraView: ARView {
             fatalError("Error in setup of ciContext.")
         }
         
+        
+        
         _ = try? ciContext.startTask(toRender: filteredImage, to: destination)
     }
 }
+
