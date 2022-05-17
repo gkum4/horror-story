@@ -10,9 +10,17 @@
 		0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0EF1362822AF560067416B /* AppDelegate.swift */; };
 		0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0EF1382822AF560067416B /* SceneDelegate.swift */; };
 		0C0EF13B2822AF560067416B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0EF13A2822AF560067416B /* ViewController.swift */; };
-		0C0EF13E2822AF560067416B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF13C2822AF560067416B /* Main.storyboard */; };
 		0C0EF1402822AF580067416B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF13F2822AF580067416B /* Assets.xcassets */; };
 		0C0EF1432822AF580067416B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF1412822AF580067416B /* LaunchScreen.storyboard */; };
+		B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F17972831BF660048D58D /* RealityKitTestViewController.swift */; };
+		B21F179A2831CAB00048D58D /* som1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B21F17992831CAB00048D58D /* som1.wav */; };
+		B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */; };
+		B21F17F428332E7E0048D58D /* cala boca eu te odeio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17EE28332E7C0048D58D /* cala boca eu te odeio.mp3 */; };
+		B21F17F528332E7E0048D58D /* bebe curto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17EF28332E7C0048D58D /* bebe curto.mp3 */; };
+		B21F17F628332E7E0048D58D /* respiracao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F028332E7D0048D58D /* respiracao.mp3 */; };
+		B21F17F728332E7E0048D58D /* bebe chorando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F128332E7D0048D58D /* bebe chorando.mp3 */; };
+		B21F17F828332E7E0048D58D /* zumbi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F228332E7D0048D58D /* zumbi.mp3 */; };
+		B21F17F928332E7E0048D58D /* nooooo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F328332E7E0048D58D /* nooooo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,18 @@
 		0C0EF1362822AF560067416B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C0EF1382822AF560067416B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0C0EF13A2822AF560067416B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0C0EF13D2822AF560067416B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C0EF13F2822AF580067416B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C0EF1422822AF580067416B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C0EF1442822AF580067416B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B21F17972831BF660048D58D /* RealityKitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitTestViewController.swift; sourceTree = "<group>"; };
+		B21F17992831CAB00048D58D /* som1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = som1.wav; sourceTree = "<group>"; };
+		B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = HorrorSceneTest.rcproject; sourceTree = "<group>"; };
+		B21F17EE28332E7C0048D58D /* cala boca eu te odeio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cala boca eu te odeio.mp3"; sourceTree = "<group>"; };
+		B21F17EF28332E7C0048D58D /* bebe curto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bebe curto.mp3"; sourceTree = "<group>"; };
+		B21F17F028332E7D0048D58D /* respiracao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = respiracao.mp3; sourceTree = "<group>"; };
+		B21F17F128332E7D0048D58D /* bebe chorando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bebe chorando.mp3"; sourceTree = "<group>"; };
+		B21F17F228332E7D0048D58D /* zumbi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zumbi.mp3; sourceTree = "<group>"; };
+		B21F17F328332E7E0048D58D /* nooooo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nooooo.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +72,18 @@
 		0C0EF1352822AF560067416B /* Horror Story */ = {
 			isa = PBXGroup;
 			children = (
+				B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */,
 				0C0EF1362822AF560067416B /* AppDelegate.swift */,
 				0C0EF1382822AF560067416B /* SceneDelegate.swift */,
 				0C0EF13A2822AF560067416B /* ViewController.swift */,
-				0C0EF13C2822AF560067416B /* Main.storyboard */,
+				B21F17972831BF660048D58D /* RealityKitTestViewController.swift */,
+				B21F17992831CAB00048D58D /* som1.wav */,
+				B21F17F128332E7D0048D58D /* bebe chorando.mp3 */,
+				B21F17EF28332E7C0048D58D /* bebe curto.mp3 */,
+				B21F17EE28332E7C0048D58D /* cala boca eu te odeio.mp3 */,
+				B21F17F328332E7E0048D58D /* nooooo.mp3 */,
+				B21F17F028332E7D0048D58D /* respiracao.mp3 */,
+				B21F17F228332E7D0048D58D /* zumbi.mp3 */,
 				0C0EF13F2822AF580067416B /* Assets.xcassets */,
 				0C0EF1412822AF580067416B /* LaunchScreen.storyboard */,
 				0C0EF1442822AF580067416B /* Info.plist */,
@@ -125,9 +149,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21F17F528332E7E0048D58D /* bebe curto.mp3 in Resources */,
+				B21F17F628332E7E0048D58D /* respiracao.mp3 in Resources */,
+				B21F17F428332E7E0048D58D /* cala boca eu te odeio.mp3 in Resources */,
+				B21F17F728332E7E0048D58D /* bebe chorando.mp3 in Resources */,
+				B21F179A2831CAB00048D58D /* som1.wav in Resources */,
+				B21F17F928332E7E0048D58D /* nooooo.mp3 in Resources */,
 				0C0EF1432822AF580067416B /* LaunchScreen.storyboard in Resources */,
+				B21F17F828332E7E0048D58D /* zumbi.mp3 in Resources */,
 				0C0EF1402822AF580067416B /* Assets.xcassets in Resources */,
-				0C0EF13E2822AF560067416B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +170,15 @@
 			files = (
 				0C0EF13B2822AF560067416B /* ViewController.swift in Sources */,
 				0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */,
+				B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
+				B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0C0EF13C2822AF560067416B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0C0EF13D2822AF560067416B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0C0EF1412822AF580067416B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,11 +311,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AZA2LHKU7Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,11 +338,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AZA2LHKU7Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
