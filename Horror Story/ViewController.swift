@@ -28,6 +28,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         cameraView.applyOldFilm()
         setupSubviews()
         startSpeechRecognizer()
+//        stopSpeechRecognizer()
     }
 
     private func setupSubviews() {
@@ -51,6 +52,14 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     private func startSpeechRecognizer() {
         do {
             try speechRecognizer.startRecording()
+        } catch {
+            print("Error initializing speech recognizer recording")
+        }
+    }
+    
+    private func stopSpeechRecognizer() {
+        do {
+            try speechRecognizer.audioEngine.stop()
         } catch {
             print("Error initializing speech recognizer recording")
         }

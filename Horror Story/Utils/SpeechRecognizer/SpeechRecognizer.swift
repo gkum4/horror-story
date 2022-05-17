@@ -17,7 +17,7 @@ class SpeechRecognizer {
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "pt-BR"))!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
-    private let audioEngine = AVAudioEngine()
+    let audioEngine = AVAudioEngine()
     
     private var delegate: SpeechRecognizerDelegate!
     
@@ -32,7 +32,7 @@ class SpeechRecognizer {
         
         // Configure the audio session for the app.
         let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(.playAndRecord, mode: .measurement, options: .mixWithOthers)
+        try audioSession.setCategory(.playAndRecord, mode: .default, options: .allowBluetoothA2DP)
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         let inputNode = audioEngine.inputNode
 
