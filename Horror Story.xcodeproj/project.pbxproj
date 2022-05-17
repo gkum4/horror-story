@@ -18,6 +18,7 @@
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
 		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
 		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
+		0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C122833CCDF0046F4DC /* NoiseSoundPlayer.swift */; };
 		B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F17972831BF660048D58D /* RealityKitTestViewController.swift */; };
 		B21F179A2831CAB00048D58D /* som1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B21F17992831CAB00048D58D /* som1.wav */; };
 		B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */; };
@@ -44,6 +45,7 @@
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
 		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		0CB34C122833CCDF0046F4DC /* NoiseSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseSoundPlayer.swift; sourceTree = "<group>"; };
 		B21F17972831BF660048D58D /* RealityKitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitTestViewController.swift; sourceTree = "<group>"; };
 		B21F17992831CAB00048D58D /* som1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = som1.wav; sourceTree = "<group>"; };
 		B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = HorrorSceneTest.rcproject; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		0CB34C09283320D80046F4DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0CB34C112833CCBD0046F4DC /* NoiseSoundPlayer */,
 				0CB34C0E283321780046F4DC /* SpeechRecognizer */,
 				0CB34C0D283321080046F4DC /* CameraFilterHandler */,
 				0CB34C0C283320FE0046F4DC /* Extensions */,
@@ -166,6 +169,14 @@
 				0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */,
 			);
 			path = SpeechRecognizer;
+			sourceTree = "<group>";
+		};
+		0CB34C112833CCBD0046F4DC /* NoiseSoundPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				0CB34C122833CCDF0046F4DC /* NoiseSoundPlayer.swift */,
+			);
+			path = NoiseSoundPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */,
 				B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
+				0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */,
 				0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */,
 				0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */,
 				B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */,
@@ -395,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
@@ -426,7 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";

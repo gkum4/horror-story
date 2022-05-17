@@ -20,6 +20,12 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         uiLabel.font = .systemFont(ofSize: 18)
         return uiLabel
     }()
+    private lazy var exitLabel: UILabel = {
+        let uiLabel = UILabel()
+        uiLabel.text = "Diga: \"Eu quero sair\" para voltar"
+        uiLabel.font = .systemFont(ofSize: 18)
+        return uiLabel
+    }()
     private lazy var speechRecognizer = SpeechRecognizer(delegate: self)
     private var startedHorror = false
     
@@ -34,6 +40,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     private func setupSubviews() {
         view.addSubview(cameraView)
         view.addSubview(label)
+        view.addSubview(exitLabel)
         
         setupConstraints()
     }
@@ -47,6 +54,13 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
             label.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ]
         NSLayoutConstraint.activate(labelConstraints)
+        
+        exitLabel.translatesAutoresizingMaskIntoConstraints = false
+        let exitLabelConstraints: [NSLayoutConstraint] = [
+            exitLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            exitLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor)
+        ]
+        NSLayoutConstraint.activate(exitLabelConstraints)
     }
     
     private func startSpeechRecognizer() {
@@ -66,6 +80,19 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     }
     
     func speechCallback(speech: String) {
+        if speech.contains("sair") {
+            if startedHorror {
+                exitLabel.textColor = .red
+                exitLabel.text = "VOCÊ ESTÁ PRESO"
+                exitLabel.font = .systemFont(ofSize: 30)
+                return
+            }
+            
+            cameraView.removeAllFilters()
+            label.text = "Diga: \"Eu quero contato\""
+            return
+        }
+        
         if startedHorror {
             return
         }
@@ -76,7 +103,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
             return
         }
         
-        if speech.contains("consequências") {
+        if speech.contains("consequência") {
             cameraView.applyGlitch()
             label.text = "Diga: \"Me mostre a verdade\""
 //            cameraView.loadScene()
