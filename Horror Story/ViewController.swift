@@ -100,6 +100,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         if speech.contains("contato") {
             cameraView.applyPixellate()
             label.text = "Diga: \"Eu aceito as consequências\""
+            NoiseSoundPlayer.shared.startSound()
             return
         }
         

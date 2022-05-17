@@ -12,7 +12,7 @@ class NoiseSoundPlayer {
     static let shared = NoiseSoundPlayer()
     
     func startSound() {
-        if let bundle = Bundle.main.path(forResource: "NOME", ofType: "TIPO") {
+        if let bundle = Bundle.main.path(forResource: "ruido", ofType: "wav") {
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
             
             do {
@@ -20,7 +20,10 @@ class NoiseSoundPlayer {
                 guard let audioPlayer = player else { return }
                 audioPlayer.numberOfLoops = -1
                 audioPlayer.prepareToPlay()
+                
                 audioPlayer.play()
+                audioPlayer.volume = 0.03
+                
             } catch {
                 print(error)
             }
