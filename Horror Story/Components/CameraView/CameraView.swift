@@ -12,6 +12,7 @@ import UIKit
 class CameraView: ARView {
     private var filtersCIContext: CIContext?
     private lazy var filterHandler = CameraFilterHandler()
+    var headTrackingManager: HeadTrackingManager?
     
     override init(
         frame frameRect: CGRect,
@@ -24,10 +25,13 @@ class CameraView: ARView {
             automaticallyConfigureSession: automaticallyConfigureSession
         )
         
+        headTrackingManager = HeadTrackingManager(parentARView: self)
         self.renderCallbacks.prepareWithDevice = { device in
             self.filtersCIContext = CIContext(mtlDevice: device)
         }
         self.renderCallbacks.postProcess = postProcessARViewFrames
+        
+        
         loadScene()
     }
     
@@ -131,8 +135,8 @@ class CameraView: ARView {
         guard let ciContext = self.filtersCIContext else {
             fatalError("Error in setup of ciContext.")
         }
-        
-        
+        print("camera out : \(self.session.currentFrame)")
+        print("head update: \(self.audioListener?.transform)")
         
         _ = try? ciContext.startTask(toRender: filteredImage, to: destination)
     }

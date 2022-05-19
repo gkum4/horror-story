@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>necessario para ar</string>
+	<key>NSMotionUsageDescription</key>
+	<string>necessario para rastrear cabeça</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

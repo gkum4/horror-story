@@ -19,6 +19,7 @@
 		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
 		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
 		0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C122833CCDF0046F4DC /* NoiseSoundPlayer.swift */; };
+		B213EA09283668920099BF6D /* CameraView+HeadTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213EA08283668920099BF6D /* CameraView+HeadTracking.swift */; };
 		B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F17972831BF660048D58D /* RealityKitTestViewController.swift */; };
 		B21F179A2831CAB00048D58D /* som1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B21F17992831CAB00048D58D /* som1.wav */; };
 		B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */; };
@@ -47,6 +48,7 @@
 		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		0CB34C122833CCDF0046F4DC /* NoiseSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseSoundPlayer.swift; sourceTree = "<group>"; };
+		B213EA08283668920099BF6D /* CameraView+HeadTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraView+HeadTracking.swift"; sourceTree = "<group>"; };
 		B21F17972831BF660048D58D /* RealityKitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitTestViewController.swift; sourceTree = "<group>"; };
 		B21F17992831CAB00048D58D /* som1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = som1.wav; sourceTree = "<group>"; };
 		B21F179F2832978B0048D58D /* HorrorSceneTest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = HorrorSceneTest.rcproject; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				0CB34C072833178A0046F4DC /* CameraView.swift */,
+				B213EA08283668920099BF6D /* CameraView+HeadTracking.swift */,
 			);
 			path = CameraView;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
 				0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */,
 				0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */,
+				B213EA09283668920099BF6D /* CameraView+HeadTracking.swift in Sources */,
 				0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */,
 				B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */,
 				B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */,
