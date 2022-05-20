@@ -31,18 +31,20 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cameraView.applyOldFilm()
+//        cameraView.applyOldFilm()
         setupSubviews()
-        startSpeechRecognizer()
+//        startSpeechRecognizer()
 //        stopSpeechRecognizer()
     }
 
     private func setupSubviews() {
-        view.addSubview(cameraView)
-        view.addSubview(label)
-        view.addSubview(exitLabel)
-        
-        setupConstraints()
+//        view.addSubview(cameraView)
+//        view.addSubview(label)
+//        view.addSubview(exitLabel)
+//
+//        setupConstraints()
+        self.view.backgroundColor = .systemBackground
+        self.view.addSubview(OnboardingWarningView(frame: self.view.frame))
     }
     
     private func setupConstraints() {
