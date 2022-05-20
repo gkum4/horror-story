@@ -13,6 +13,7 @@
 		0C0EF1402822AF580067416B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF13F2822AF580067416B /* Assets.xcassets */; };
 		0C0EF1432822AF580067416B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF1412822AF580067416B /* LaunchScreen.storyboard */; };
 		0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */; };
+		0C4CDFE42837DD0100A7D670 /* OnboardingWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */; };
 		0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */; };
 		0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */; };
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
@@ -41,6 +42,7 @@
 		0C0EF1422822AF580067416B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C0EF1442822AF580067416B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterHandler.swift; sourceTree = "<group>"; };
+		0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWarningView.swift; sourceTree = "<group>"; };
 		0C8D2408282FF2A300599E44 /* ApplyFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterButton.swift; sourceTree = "<group>"; };
 		0CA0926A282BE4FF005F63FB /* CameraFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterVC.swift; sourceTree = "<group>"; };
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
@@ -113,9 +115,18 @@
 			path = "Horror Story";
 			sourceTree = "<group>";
 		};
+		0C4CDFE12837DCE100A7D670 /* OnboardingWarningView */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */,
+			);
+			path = OnboardingWarningView;
+			sourceTree = "<group>";
+		};
 		0CA09268282BE4E9005F63FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0C4CDFE12837DCE100A7D670 /* OnboardingWarningView */,
 				0CB34C062833177B0046F4DC /* CameraView */,
 				0CA09269282BE4F0005F63FB /* CameraFilter */,
 			);
@@ -270,6 +281,7 @@
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
 				0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */,
 				0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */,
+				0C4CDFE42837DD0100A7D670 /* OnboardingWarningView.swift in Sources */,
 				0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */,
 				B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */,
 				B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */,
