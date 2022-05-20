@@ -8,6 +8,7 @@
 import RealityKit
 import CoreImage
 import UIKit
+import ARKit
 
 class CameraView: ARView {
     private var filtersCIContext: CIContext?
@@ -104,17 +105,47 @@ class CameraView: ARView {
     }
     
     func loadScene() {
-        do {
-            let boxAnchor = try HorrorSceneTest.loadBox()
-            self.scene.anchors.append(boxAnchor)
-            print("carregou")
-        } catch {
-            // handle error
-        }
+//        do {
+//            let boxAnchor = try HorrorSceneTest.loadBox()
+//            self.scene.anchors.append(boxAnchor)
+//        } catch {
+//            // handle error
+//        }
         
+        var sphereMaterial = SimpleMaterial()
+        sphereMaterial.metallic = MaterialScalarParameter(floatLiteral: 0.5)
+        sphereMaterial.roughness = MaterialScalarParameter(floatLiteral: 0.5)
+        sphereMaterial.color = .init(
+            tint: UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8),
+            texture: nil
+        )
+        let sphereEntity = ModelEntity(
+            mesh: .generateSphere(radius: 0.5),
+            materials: [sphereMaterial]
+        )
+
+        let sphereAnchor = AnchorEntity(world: SIMD3<Float>(1, 1, -2))
+        sphereAnchor.addChild(sphereEntity)
+        sphereAnchor.name = "kuma"
+
+        self.scene.addAnchor(sphereAnchor)
     }
     
     private func postProcessARViewFrames(context: ARView.PostProcessContext) {
+        if let currentFrame = self.session.currentFrame {
+            guard let kumaEntity = self.scene.findEntity(named: "kuma") else {
+                print("kumaEntity not found")
+                return
+            }
+
+            let distanceIntensity = ARCameraGeometryManager(
+                camera: currentFrame.camera,
+                entity: kumaEntity
+            ).getPointingAtEntityIntensity()
+
+            filterHandler.intensity = CGFloat(distanceIntensity)
+        }
+        
         guard let frameImage = CIImage(mtlTexture: context.sourceColorTexture) else {
             fatalError("Unable to create a CIImage from sourceColorTexture.")
         }
@@ -131,8 +162,6 @@ class CameraView: ARView {
         guard let ciContext = self.filtersCIContext else {
             fatalError("Error in setup of ciContext.")
         }
-        
-        
         
         _ = try? ciContext.startTask(toRender: filteredImage, to: destination)
     }

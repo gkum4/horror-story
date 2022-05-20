@@ -10,11 +10,38 @@ import UIKit
 
 class CameraFilterHandler {
     var filtersToApply: [Filters] = []
+    var intensity: CGFloat = 0
     
     func applyFilter(image: CIImage) -> CIImage {
         var finalImage = image
         
-        for filter in filtersToApply {
+        var intensityFilters: [Filters] = []
+        
+        if intensity > 0.1 && intensity < 0.3 {
+            intensityFilters.append(.sepiaTone)
+            intensityFilters.append(.darkScratches)
+        }
+        
+        if intensity >= 0.3 && intensity < 0.7 {
+            intensityFilters.append(.sepiaTone)
+            intensityFilters.append(.darkScratches)
+            intensityFilters.append(.pixellate)
+        }
+        
+        if intensity >= 0.7 {
+            let randValue = Int.random(in: 0...1)
+            if randValue == 1 {
+                intensityFilters.append(.colorInvert)
+            }
+            intensityFilters.append(.sepiaTone)
+            intensityFilters.append(.redIncrease)
+            intensityFilters.append(.darkScratches)
+            intensityFilters.append(.blink)
+            intensityFilters.append(.pixellate)
+            intensityFilters.append(.colorGlitch)
+        }
+        
+        for filter in intensityFilters {
             switch filter {
             case .sepiaTone:
                 finalImage = applySepiaToneFilter(to: finalImage)
@@ -44,23 +71,9 @@ class CameraFilterHandler {
         return finalImage
     }
     
-    enum Filters: String {
-        case sepiaTone = "Sepia Tone"
-        case darkScratches = "Dark Scratches"
-        case whiteSpecks = "White Specks"
-        case colorInvert = "Color Invert"
-        case redIncrease = "Red Increase"
-        case bloom = "Bloom"
-        case noir = "Noir"
-        case blink = "Blink"
-        case colorGlitch = "Color Glitch"
-        case pixellate = "Pixellate"
-        case negativeBlink = "Negative Blink"
-    }
-    
     private func applySepiaToneFilter(to image: CIImage) -> CIImage {
         let filter = CIFilter.sepiaTone()
-        filter.intensity = 0.8
+        filter.intensity = Float(intensity) * 1.5
         filter.inputImage = image
         
         guard let outputImage = filter.outputImage else {
@@ -268,7 +281,7 @@ class CameraFilterHandler {
     private func applyPixellateFilter(to image: CIImage) -> CIImage {
         let pixellateFilter = CIFilter.pixellate()
         pixellateFilter.inputImage = image
-        pixellateFilter.scale = Float.random(in: 8...40)
+        pixellateFilter.scale = Float.random(in: Float(8*intensity)...Float(40*intensity))
         
         guard let pixellatedImage = pixellateFilter.outputImage else {
             print("Error generating pixellatedImage")
@@ -313,5 +326,19 @@ class CameraFilterHandler {
         }
         
         return stackedImage
+    }
+    
+    enum Filters: String {
+        case sepiaTone = "Sepia Tone"
+        case darkScratches = "Dark Scratches"
+        case whiteSpecks = "White Specks"
+        case colorInvert = "Color Invert"
+        case redIncrease = "Red Increase"
+        case bloom = "Bloom"
+        case noir = "Noir"
+        case blink = "Blink"
+        case colorGlitch = "Color Glitch"
+        case pixellate = "Pixellate"
+        case negativeBlink = "Negative Blink"
     }
 }
