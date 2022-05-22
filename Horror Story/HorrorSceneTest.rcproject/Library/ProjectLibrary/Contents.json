@@ -23,5 +23,15 @@
     "libraryIdentifier" : "cbb6ec8a698c169dc8eb475b3d10234d",
     "format" : "audio",
     "displayName" : "nooooo.mp3"
+  },
+  {
+    "libraryIdentifier" : "3bab1280535c59415bc8ba6baf9ef39a",
+    "format" : "model",
+    "displayName" : "fantasma.usdz"
+  },
+  {
+    "libraryIdentifier" : "128f3e5e4d35e1cb6ab65d906859177e",
+    "format" : "model",
+    "displayName" : "Ghost_3d-inktober2019.usdz"
   }
 ]
