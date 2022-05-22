@@ -16,8 +16,6 @@ class HeadTrackingManager: NSObject, CMHeadphoneMotionManagerDelegate {
     var position = simd_float4x4()
     var parentListener: Entity?
     
-//    var cameraFrame: ARFrame?
-    
     init(parentARView: ARView) {
         self.parentARView = parentARView
         super.init()
