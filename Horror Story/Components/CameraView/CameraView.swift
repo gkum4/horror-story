@@ -14,6 +14,7 @@ class CameraView: ARView {
     private var filtersCIContext: CIContext?
     private lazy var filterHandler = CameraFilterHandler()
     var headTrackingManager: HeadTrackingManager?
+    let entityNames = ["a2", "bebe"]
     
     override init(
         frame frameRect: CGRect,
@@ -109,45 +110,47 @@ class CameraView: ARView {
     }
     
     func loadScene() {
-//        do {
-//            let boxAnchor = try HorrorSceneTest.loadBox()
-//            self.scene.anchors.append(boxAnchor)
-//        } catch {
-//            // handle error
-//        }
+        do {
+            let boxAnchor = try HorrorSceneTest.loadBox()
+            self.scene.anchors.append(boxAnchor)
+        } catch {
+            // handle error
+        }
         
-        var sphereMaterial = SimpleMaterial()
-        sphereMaterial.metallic = MaterialScalarParameter(floatLiteral: 0.5)
-        sphereMaterial.roughness = MaterialScalarParameter(floatLiteral: 0.5)
-        sphereMaterial.color = .init(
-            tint: UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8),
-            texture: nil
-        )
-        let sphereEntity = ModelEntity(
-            mesh: .generateSphere(radius: 0.5),
-            materials: [sphereMaterial]
-        )
-
-        let sphereAnchor = AnchorEntity(world: SIMD3<Float>(1, 1, -2))
-        sphereAnchor.addChild(sphereEntity)
-        sphereAnchor.name = "kuma"
-
-        self.scene.addAnchor(sphereAnchor)
+//        var sphereMaterial = SimpleMaterial()
+//        sphereMaterial.metallic = MaterialScalarParameter(floatLiteral: 0.5)
+//        sphereMaterial.roughness = MaterialScalarParameter(floatLiteral: 0.5)
+//        sphereMaterial.color = .init(
+//            tint: UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8),
+//            texture: nil
+//        )
+//        let sphereEntity = ModelEntity(
+//            mesh: .generateSphere(radius: 0.5),
+//            materials: [sphereMaterial]
+//        )
+//
+//        let sphereAnchor = AnchorEntity(world: SIMD3<Float>(1, 1, -2))
+//        sphereAnchor.addChild(sphereEntity)
+//        sphereAnchor.name = "kuma"
+//
+//        self.scene.addAnchor(sphereAnchor)
     }
     
     private func postProcessARViewFrames(context: ARView.PostProcessContext) {
-        if let currentFrame = self.session.currentFrame {
-            guard let kumaEntity = self.scene.findEntity(named: "kuma") else {
-                print("kumaEntity not found")
-                return
+        for entity in entityNames {
+            if let currentFrame = self.session.currentFrame {
+                guard let kumaEntity = self.scene.findEntity(named: entity) else {
+                    print("kumaEntity not found")
+                    return
+                }
+
+                let distanceIntensity = ARCameraGeometryManager(
+                    camera: currentFrame.camera,
+                    entity: kumaEntity
+                ).getPointingAtEntityIntensity()
+
+                filterHandler.intensity = CGFloat(distanceIntensity)
             }
-
-            let distanceIntensity = ARCameraGeometryManager(
-                camera: currentFrame.camera,
-                entity: kumaEntity
-            ).getPointingAtEntityIntensity()
-
-            filterHandler.intensity = CGFloat(distanceIntensity)
         }
         
         guard let frameImage = CIImage(mtlTexture: context.sourceColorTexture) else {
