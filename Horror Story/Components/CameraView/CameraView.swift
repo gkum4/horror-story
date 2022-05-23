@@ -13,6 +13,7 @@ import ARKit
 class CameraView: ARView {
     private var filtersCIContext: CIContext?
     private lazy var filterHandler = CameraFilterHandler()
+    var headTrackingManager: HeadTrackingManager?
     
     override init(
         frame frameRect: CGRect,
@@ -25,10 +26,13 @@ class CameraView: ARView {
             automaticallyConfigureSession: automaticallyConfigureSession
         )
         
+        headTrackingManager = HeadTrackingManager(parentARView: self)
         self.renderCallbacks.prepareWithDevice = { device in
             self.filtersCIContext = CIContext(mtlDevice: device)
         }
         self.renderCallbacks.postProcess = postProcessARViewFrames
+        
+        
         loadScene()
     }
     

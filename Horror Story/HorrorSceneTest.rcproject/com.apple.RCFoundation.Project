@@ -932,6 +932,7 @@
                       ]
                     }
                   },
+                  "7D3D5F1F-A4D4-468E-8042-F76EAA13174E" : null,
                   "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
                   "8E81FA8A-53F5-4271-BB51-DE49C6450CEE" : null,
                   "9F137F98-DAE7-42AE-B01C-481D92D6C166" : {
@@ -1020,9 +1021,9 @@
                         0,
                         0.036492001265287399,
                         0,
-                        1.1247364282608032,
-                        1.5000004768371582,
-                        -2.9563982486724854,
+                        1.0644940137863159,
+                        1.5000003576278687,
+                        -3.1206820011138916,
                         1
                       ]
                     }
@@ -1030,58 +1031,78 @@
                   "079B8952-C71A-46F3-9B91-BEC7EEE811C4" : null,
                   "98E797DE-D19A-4B0E-ABFB-5D3499117F9C" : {
                     "overrides" : {
-                      "arguments" : [
-                        [
-                          "diameter",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.43743372937260161
-                          }
-                        ],
-                        [
-                          "height",
-                          {
-                            "typeName" : "Double",
-                            "value" : 1.2938442010634188
-                          }
-                        ],
-                        [
-                          "material",
-                          {
-                            "typeName" : "String",
-                            "value" : "rubber"
-                          }
-                        ],
-                        [
-                          "materialColor",
-                          {
-                            "typeName" : "double4",
-                            "value" : [
-                              0.93333500623703003,
-                              0.93333500623703003,
-                              0.93333500623703003,
+                      "children" : {
+                        "USDScene" : {
+                          "overrides" : {
+                            "arguments" : [
+                              [
+                                "includeSceneScaling",
+                                {
+                                  "typeName" : "Bool",
+                                  "value" : false
+                                }
+                              ],
+                              [
+                                "subpath",
+                                {
+                                  "typeName" : "String",
+                                  "value" : ""
+                                }
+                              ],
+                              [
+                                "url",
+                                {
+                                  "typeName" : "String",
+                                  "value" : "model:128f3e5e4d35e1cb6ab65d906859177e\/Ghost_3d-inktober2019.usdz"
+                                }
+                              ],
+                              [
+                                "withDescendants",
+                                {
+                                  "typeName" : "Bool",
+                                  "value" : true
+                                }
+                              ]
+                            ],
+                            "factory" : {
+                              "identifier" : "com.apple.af.FileImportAssetFactory",
+                              "version" : "0.0"
+                            },
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "D93F2564-1071-4656-96B0-04A1856CD7F7"
+                                }
+                              ]
+                            ]
+                          },
+                          "transform" : {
+                            "matrix" : [
+                              0.0099999997764825821,
+                              0,
+                              0,
+                              0,
+                              0,
+                              0.0099999997764825821,
+                              0,
+                              0,
+                              0,
+                              0,
+                              0.0099999997764825821,
+                              0,
+                              0,
+                              0,
+                              0,
                               1
                             ]
                           }
-                        ],
-                        [
-                          "roundness",
-                          {
-                            "typeName" : "Double",
-                            "value" : 1
-                          }
-                        ],
-                        [
-                          "type",
-                          {
-                            "typeName" : "String",
-                            "value" : "capsule"
-                          }
-                        ]
-                      ],
+                        }
+                      },
                       "factory" : {
-                        "identifier" : "com.apple.rc.af.CoreAssetFactories.PrimitiveShapeAssetFactory",
-                        "version" : "1.0"
+                        "identifier" : "com.apple.af.Group",
+                        "version" : "0.0"
                       },
                       "runtimeAttributes" : [
                         [
@@ -1102,25 +1123,26 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        0.036492001265287399,
+                        1.0034557580947876,
+                        -0.011546052992343903,
+                        -0.023805379867553711,
                         0,
+                        0.011542797088623047,
+                        1.0037374496459961,
+                        -0.00027383206179365516,
                         0,
+                        0.023806944489479065,
+                        -2.3079491651145645e-09,
+                        1.0035219192504883,
                         0,
-                        0,
-                        0.036492001265287399,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0.036492001265287399,
-                        0,
-                        2.9701511859893799,
-                        1.4999984502792358,
-                        3.3264081478118896,
+                        2.8931727409362793,
+                        5.9604622038023081e-07,
+                        3.3170185089111328,
                         1
                       ]
                     }
                   },
+                  "0425CA71-213F-405A-8C20-90AE6CA9F8A9" : null,
                   "514E5A52-C73A-4C18-A0A2-504B842D0685" : {
                     "overrides" : {
                       "arguments" : [
@@ -1414,6 +1436,7 @@
                   "B5B22AD4-FF68-4FAA-AC69-64B5838668FE" : null,
                   "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null,
                   "C1FCE604-FD8E-45BC-ACD7-118D8AA80844" : null,
+                  "C7ECC80C-040B-4950-B481-1A84C4398BAC" : null,
                   "CC739BF2-6370-4EEB-AC7F-69E3C884BFDF" : null,
                   "CD346003-6C62-4CC2-B128-8BAF06E1FB3E" : {
                     "overrides" : {
@@ -1603,6 +1626,7 @@
                       ]
                     }
                   },
+                  "DBA4569D-8697-4B5A-9751-14EBF58AEB63" : null,
                   "E821A22C-B754-4B95-AD66-986E1EA1E76E" : null,
                   "F7A3D226-7F18-4F88-8E9A-7198D1D89DC8" : {
                     "overrides" : {
