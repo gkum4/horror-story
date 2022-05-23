@@ -14,6 +14,7 @@
 		0C0EF1432822AF580067416B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF1412822AF580067416B /* LaunchScreen.storyboard */; };
 		0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */; };
 		0C4CDFDD2837C55B00A7D670 /* ARCameraGeometryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */; };
+		0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */; };
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
 		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
 		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
@@ -43,6 +44,7 @@
 		0C0EF1442822AF580067416B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterHandler.swift; sourceTree = "<group>"; };
 		0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraGeometryManager.swift; sourceTree = "<group>"; };
+		0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProgress.swift; sourceTree = "<group>"; };
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
 		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 			path = ARCameraGeometryManager;
 			sourceTree = "<group>";
 		};
+		0C4CDFEB283BBE7300A7D670 /* StoryProgress */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */,
+			);
+			path = StoryProgress;
+			sourceTree = "<group>";
+		};
 		0CA09268282BE4E9005F63FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 		0CB34C09283320D80046F4DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0C4CDFEB283BBE7300A7D670 /* StoryProgress */,
 				0C4CDFDB2837C53D00A7D670 /* ARCameraGeometryManager */,
 				0CB34C112833CCBD0046F4DC /* NoiseSoundPlayer */,
 				0CB34C0E283321780046F4DC /* SpeechRecognizer */,
@@ -275,6 +286,7 @@
 				0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */,
 				0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */,
 				0CB34C082833178A0046F4DC /* CameraView.swift in Sources */,
+				0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */,
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
 				0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */,
 				0C4CDFDD2837C55B00A7D670 /* ARCameraGeometryManager.swift in Sources */,
