@@ -15,6 +15,8 @@
 		0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */; };
 		0C4CDFDD2837C55B00A7D670 /* ARCameraGeometryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */; };
 		0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */; };
+		0C4CDFE42837DD0100A7D670 /* OnboardingWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */; };
+		0C4CDFE6283830B300A7D670 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE5283830B300A7D670 /* UIControl+.swift */; };
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
 		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
 		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
@@ -45,6 +47,8 @@
 		0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterHandler.swift; sourceTree = "<group>"; };
 		0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraGeometryManager.swift; sourceTree = "<group>"; };
 		0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProgress.swift; sourceTree = "<group>"; };
+		0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWarningView.swift; sourceTree = "<group>"; };
+		0C4CDFE5283830B300A7D670 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
 		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
@@ -126,6 +130,14 @@
 			path = ARCameraGeometryManager;
 			sourceTree = "<group>";
 		};
+		0C4CDFE12837DCE100A7D670 /* OnboardingWarningView */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */,
+			);
+			path = OnboardingWarningView;
+			sourceTree = "<group>";
+		};
 		0C4CDFEB283BBE7300A7D670 /* StoryProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0CB34C062833177B0046F4DC /* CameraView */,
+				0C4CDFE12837DCE100A7D670 /* OnboardingWarningView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -168,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				0CB34BE02832C75F0046F4DC /* RealityKit+.swift */,
+				0C4CDFE5283830B300A7D670 /* UIControl+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +301,7 @@
 				0C0EF1372822AF560067416B /* AppDelegate.swift in Sources */,
 				0CB34C082833178A0046F4DC /* CameraView.swift in Sources */,
 				0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */,
+				0C4CDFE6283830B300A7D670 /* UIControl+.swift in Sources */,
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
 				0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */,
 				0C4CDFDD2837C55B00A7D670 /* ARCameraGeometryManager.swift in Sources */,
@@ -294,6 +309,7 @@
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
 				0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */,
 				B213EA09283668920099BF6D /* CameraView+HeadTracking.swift in Sources */,
+				0C4CDFE42837DD0100A7D670 /* OnboardingWarningView.swift in Sources */,
 				B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */,
 				B2F2590B283B02B90087F4C3 /* HeadphoneOnboardingView.swift in Sources */,
 				B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */,
@@ -435,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
@@ -466,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
