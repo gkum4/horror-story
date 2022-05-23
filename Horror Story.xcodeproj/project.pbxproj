@@ -281,12 +281,9 @@
 				B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
 				0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */,
-<<<<<<< HEAD
-=======
 				0C8D2409282FF2A300599E44 /* ApplyFilterButton.swift in Sources */,
 				B213EA09283668920099BF6D /* CameraView+HeadTracking.swift in Sources */,
 				0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */,
->>>>>>> feature/headtracking
 				B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */,
 				B2F2590B283B02B90087F4C3 /* HeadphoneOnboardingView.swift in Sources */,
 				B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */,
