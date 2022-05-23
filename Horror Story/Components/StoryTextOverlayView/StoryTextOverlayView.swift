@@ -20,7 +20,7 @@ class StoryTextOverlayView: UIView {
         return uiView
     }()
     
-    private lazy var textLabel: UILabel = {
+    private lazy var storyLabel: UILabel = {
         let uiLabel = UILabel()
         uiLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         uiLabel.text = """
@@ -33,10 +33,27 @@ class StoryTextOverlayView: UIView {
         Dando continuidade a pesquisa realizada até então, uma equipe de desenvolvedores seguiu todas as instruções deixadas pelo seu professor. Havia uma lista de tarefas e exigências a serem seguidas, que tangibilizariam a descoberta feita antes de seu sumiço. A promessa, é que a aplicação digital construída levaria seus usuários a uma explicação concreta dos fatos ocorridos na cidade Campinas.
 
         O que você irá experienciar não é uma simulação, e sim, um contato direto com a verdade. Siga as instruções e descubra o resultado da investigação.
-        
-
+        """
+        uiLabel.numberOfLines = 0
+        uiLabel.translatesAutoresizingMaskIntoConstraints = false
+        return uiLabel
+    }()
+    
+    private lazy var speechRequestLabel: UILabel = {
+        let uiLabel = UILabel()
+        uiLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        uiLabel.text = """
         Leia em voz alta a última instrução deixada por Eduardo Martinelli para iniciar o contato.
-
+        """
+        uiLabel.numberOfLines = 0
+        uiLabel.translatesAutoresizingMaskIntoConstraints = false
+        return uiLabel
+    }()
+    
+    private lazy var speechTextLabel: UILabel = {
+        let uiLabel = UILabel()
+        uiLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        uiLabel.text = """
         “Um aplicativo você irá baixar, e com assiduidade ele você vai usar. Ao aceite, cuidado você deve tomar. A melhor experiência de uso você terá, mas dentro de uma ilusão você viverá.”
         """
         uiLabel.numberOfLines = 0
@@ -52,7 +69,8 @@ class StoryTextOverlayView: UIView {
     private func setup() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = 15
-        self.backgroundColor = .init(red: 0, green: 0, blue: 0, alpha: 0.8)
+        self.backgroundColor = .init(red: 0, green: 0, blue: 0, alpha: 0.7)
+        
         setupSubviews()
     }
     
@@ -71,8 +89,12 @@ class StoryTextOverlayView: UIView {
     private func setupContentView() {
         setupContentViewConstraints()
         
-        contentView.addSubview(textLabel)
-        setupTextLabelConstraints()
+        contentView.addSubview(storyLabel)
+        contentView.addSubview(speechRequestLabel)
+        contentView.addSubview(speechTextLabel)
+        setupStoryLabelConstraints()
+        setupSpeechRequestLabelConstraints()
+        setupSpeechTextLabelConstraints()
     }
     
     private func setupScrollViewConstraints() {
@@ -80,7 +102,7 @@ class StoryTextOverlayView: UIView {
             scrollView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
         ]
         NSLayoutConstraint.activate(scrollViewConstraints)
     }
@@ -95,14 +117,32 @@ class StoryTextOverlayView: UIView {
         NSLayoutConstraint.activate(contentViewConstraints)
     }
     
-    private func setupTextLabelConstraints() {
-        let textLabelConstraints: [NSLayoutConstraint] = [
-            textLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            textLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            textLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+    private func setupStoryLabelConstraints() {
+        let storyLabelConstraints: [NSLayoutConstraint] = [
+            storyLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            storyLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            storyLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
         ]
-        NSLayoutConstraint.activate(textLabelConstraints)
+        NSLayoutConstraint.activate(storyLabelConstraints)
+    }
+    
+    private func setupSpeechRequestLabelConstraints() {
+        let speechRequestLabelConstraints: [NSLayoutConstraint] = [
+            speechRequestLabel.topAnchor.constraint(equalTo: storyLabel.bottomAnchor, constant: 30),
+            speechRequestLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            speechRequestLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+        ]
+        NSLayoutConstraint.activate(speechRequestLabelConstraints)
+    }
+    
+    private func setupSpeechTextLabelConstraints() {
+        let speechTextLabelConstraints: [NSLayoutConstraint] = [
+            speechTextLabel.topAnchor.constraint(equalTo: speechRequestLabel.bottomAnchor, constant: 15),
+            speechTextLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            speechTextLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            speechTextLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+        ]
+        NSLayoutConstraint.activate(speechTextLabelConstraints)
     }
     
     required init?(coder: NSCoder) {
