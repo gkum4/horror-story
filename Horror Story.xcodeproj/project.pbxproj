@@ -29,6 +29,7 @@
 		B21F17F828332E7E0048D58D /* zumbi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F228332E7D0048D58D /* zumbi.mp3 */; };
 		B21F17F928332E7E0048D58D /* nooooo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F328332E7E0048D58D /* nooooo.mp3 */; };
 		B21F17FD2833D15B0048D58D /* ruido.wav in Resources */ = {isa = PBXBuildFile; fileRef = B21F17FC2833D15B0048D58D /* ruido.wav */; };
+		B2F2590B283B02B90087F4C3 /* HeadphoneOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2590A283B02B90087F4C3 /* HeadphoneOnboardingView.swift */; };
 		B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		B21F17F228332E7D0048D58D /* zumbi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zumbi.mp3; sourceTree = "<group>"; };
 		B21F17F328332E7E0048D58D /* nooooo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nooooo.mp3; sourceTree = "<group>"; };
 		B21F17FC2833D15B0048D58D /* ruido.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ruido.wav; sourceTree = "<group>"; };
+		B2F2590A283B02B90087F4C3 /* HeadphoneOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadphoneOnboardingView.swift; sourceTree = "<group>"; };
 		B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		0C0EF1352822AF560067416B /* Horror Story */ = {
 			isa = PBXGroup;
 			children = (
+				B2F25909283B028A0087F4C3 /* Scenes */,
 				0CB34C09283320D80046F4DC /* Utils */,
 				0CA09268282BE4E9005F63FB /* Components */,
 				0C0EF1362822AF560067416B /* AppDelegate.swift */,
@@ -180,6 +183,14 @@
 				0CB34C122833CCDF0046F4DC /* NoiseSoundPlayer.swift */,
 			);
 			path = NoiseSoundPlayer;
+			sourceTree = "<group>";
+		};
+		B2F25909283B028A0087F4C3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B2F2590A283B02B90087F4C3 /* HeadphoneOnboardingView.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				0CA0926B282BE4FF005F63FB /* CameraFilterVC.swift in Sources */,
 >>>>>>> feature/headtracking
 				B21F17982831BF660048D58D /* RealityKitTestViewController.swift in Sources */,
+				B2F2590B283B02B90087F4C3 /* HeadphoneOnboardingView.swift in Sources */,
 				B21F17A0283297930048D58D /* HorrorSceneTest.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
