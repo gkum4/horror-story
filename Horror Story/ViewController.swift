@@ -14,55 +14,25 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         cameraMode: .ar,
         automaticallyConfigureSession: true
     )
-    private lazy var label: UILabel = {
-        let uiLabel = UILabel()
-        uiLabel.text = "Diga: \"Eu quero contato\""
-        uiLabel.font = .systemFont(ofSize: 18)
-        return uiLabel
-    }()
-    private lazy var exitLabel: UILabel = {
-        let uiLabel = UILabel()
-        uiLabel.text = "Diga: \"Eu quero sair\" para voltar"
-        uiLabel.font = .systemFont(ofSize: 18)
-        return uiLabel
-    }()
     private lazy var speechRecognizer = SpeechRecognizer(delegate: self)
-    private var startedHorror = false
+    private lazy var onboardingWarningView: OnboardingWarningView = {
+        let warningView = OnboardingWarningView(frame: self.view.frame)
+        warningView.notAcceptButton.addAction(for: .touchUpInside, notAcceptTermsPress)
+        warningView.acceptButton.addAction(for: .touchUpInside, acceptTermsPress)
+        return warningView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        cameraView.applyOldFilm()
         setupSubviews()
-//        startSpeechRecognizer()
-//        stopSpeechRecognizer()
     }
 
     private func setupSubviews() {
-//        view.addSubview(cameraView)
-//        view.addSubview(label)
-//        view.addSubview(exitLabel)
-//
-//        setupConstraints()
         self.view.backgroundColor = .systemBackground
-        self.view.addSubview(OnboardingWarningView(frame: self.view.frame))
+        self.view.addSubview(onboardingWarningView)
     }
     
     private func setupConstraints() {
-        let safeAreaLayoutGuide = self.view.safeAreaLayoutGuide
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        let labelConstraints: [NSLayoutConstraint] = [
-            label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            label.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-        ]
-        NSLayoutConstraint.activate(labelConstraints)
-        
-        exitLabel.translatesAutoresizingMaskIntoConstraints = false
-        let exitLabelConstraints: [NSLayoutConstraint] = [
-            exitLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            exitLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor)
-        ]
-        NSLayoutConstraint.activate(exitLabelConstraints)
     }
     
     private func startSpeechRecognizer() {
@@ -82,54 +52,16 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     }
     
     func speechCallback(speech: String) {
-        if speech.contains("sair") {
-            if startedHorror {
-                exitLabel.textColor = .red
-                exitLabel.text = "VOCÊ ESTÁ PRESO"
-                exitLabel.font = .systemFont(ofSize: 30)
-                return
-            }
-            
-            cameraView.removeAllFilters()
-            label.text = "Diga: \"Eu quero contato\""
-            return
-        }
         
-        if startedHorror {
-            return
-        }
+    }
+    
+    func notAcceptTermsPress() {
+        // TODO: voltar para tela inicial
+        print("not accept")
+    }
+    
+    func acceptTermsPress() {
         
-        if speech.contains("contato") {
-            cameraView.applyPixellate()
-            label.text = "Diga: \"Eu aceito as consequências\""
-            NoiseSoundPlayer.shared.startSound()
-            return
-        }
-        
-        if speech.contains("consequência") {
-            cameraView.applyGlitch()
-            label.text = "Diga: \"Me mostre a verdade\""
-//            cameraView.loadScene()
-            return
-        }
-        
-        if speech.contains("verdade") {
-            cameraView.removeAllFilters()
-            cameraView.applyInverter()
-            label.text = "MUAHAHAHAHA"
-            startedHorror = true
-            
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { _ in
-                self.cameraView.removeAllFilters()
-                self.cameraView.applyOldFilm()
-                self.cameraView.applyRedIncrease()
-                self.cameraView.applyBlink()
-                self.cameraView.applyPixellate()
-                self.cameraView.applyGlitch()
-            })
-            
-            return
-        }
     }
 }
 
