@@ -17,6 +17,7 @@
 		0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */; };
 		0C4CDFE42837DD0100A7D670 /* OnboardingWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */; };
 		0C4CDFE6283830B300A7D670 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE5283830B300A7D670 /* UIControl+.swift */; };
+		0C4CDFEA283B0A2500A7D670 /* StoryTextOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE9283B0A2500A7D670 /* StoryTextOverlayView.swift */; };
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
 		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
 		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
@@ -49,6 +50,7 @@
 		0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProgress.swift; sourceTree = "<group>"; };
 		0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWarningView.swift; sourceTree = "<group>"; };
 		0C4CDFE5283830B300A7D670 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
+		0C4CDFE9283B0A2500A7D670 /* StoryTextOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTextOverlayView.swift; sourceTree = "<group>"; };
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
 		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
@@ -122,12 +124,21 @@
 			path = "Horror Story";
 			sourceTree = "<group>";
 		};
+
 		0C4CDFDB2837C53D00A7D670 /* ARCameraGeometryManager */ = {
 			isa = PBXGroup;
 			children = (
 				0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */,
 			);
 			path = ARCameraGeometryManager;
+			sourceTree = "<group>";
+		};
+		0C4CDFE8283B0A0F00A7D670 /* StoryTextOverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CDFE9283B0A2500A7D670 /* StoryTextOverlayView.swift */,
+			);
+			path = StoryTextOverlayView;
 			sourceTree = "<group>";
 		};
 		0C4CDFE12837DCE100A7D670 /* OnboardingWarningView */ = {
@@ -151,6 +162,7 @@
 			children = (
 				0CB34C062833177B0046F4DC /* CameraView */,
 				0C4CDFE12837DCE100A7D670 /* OnboardingWarningView */,
+				0C4CDFE8283B0A0F00A7D670 /* StoryTextOverlayView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -305,6 +317,7 @@
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
 				0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */,
 				0C4CDFDD2837C55B00A7D670 /* ARCameraGeometryManager.swift in Sources */,
+				0C4CDFEA283B0A2500A7D670 /* StoryTextOverlayView.swift in Sources */,
 				B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */,
 				0C0EF1392822AF560067416B /* SceneDelegate.swift in Sources */,
 				0CB34C132833CCDF0046F4DC /* NoiseSoundPlayer.swift in Sources */,

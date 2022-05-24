@@ -15,11 +15,16 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         automaticallyConfigureSession: true
     )
     private lazy var speechRecognizer = SpeechRecognizer(delegate: self)
-    private lazy var onboardingWarningView: OnboardingWarningView = {
-        let warningView = OnboardingWarningView(frame: self.view.frame)
-        warningView.notAcceptButton.addAction(for: .touchUpInside, notAcceptTermsPress)
-        warningView.acceptButton.addAction(for: .touchUpInside, acceptTermsPress)
-        return warningView
+    private lazy var onboardingWarning: OnboardingWarningView = {
+        let onboardingWarningView = OnboardingWarningView(frame: self.view.frame)
+        onboardingWarningView.notAcceptButton.addAction(for: .touchUpInside, notAcceptTermsPress)
+        onboardingWarningView.acceptButton.addAction(for: .touchUpInside, acceptTermsPress)
+        return onboardingWarningView
+    }()
+    private lazy var storyTextOverlay: StoryTextOverlayView = {
+        let storyTextOverlayView = StoryTextOverlayView(frame: self.view.frame)
+        storyTextOverlayView.translatesAutoresizingMaskIntoConstraints = false
+        return storyTextOverlayView
     }()
     
     override func viewDidLoad() {
@@ -29,10 +34,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
 
     private func setupSubviews() {
         self.view.backgroundColor = .systemBackground
-        self.view.addSubview(onboardingWarningView)
-    }
-    
-    private func setupConstraints() {
+        self.view.addSubview(onboardingWarning)
     }
     
     private func startSpeechRecognizer() {
@@ -52,7 +54,12 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     }
     
     func speechCallback(speech: String) {
-        
+        print(speech)
+        if speech.contains("ilusão") && speech.contains("viverá") {
+            stopSpeechRecognizer()
+            
+            storyTextOverlay.removeFromSuperview()
+        }
     }
     
     func notAcceptTermsPress() {
@@ -61,7 +68,36 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     }
     
     func acceptTermsPress() {
+        UIView.animate(withDuration: 1, animations: {
+            self.onboardingWarning.alpha = 0
+        }, completion: { _ in
+            self.onboardingWarning.removeFromSuperview()
+            
+            self.view.addSubview(self.cameraView)
+            self.storyTextOverlay.alpha = 0
+            self.setupStoryTextOverlay()
+            UIView.animate(withDuration: 1, animations: {
+                self.storyTextOverlay.alpha = 1
+            }, completion: { _ in
+                self.startSpeechRecognizer()
+            })
+        })
         
+        
+    }
+    
+    func setupStoryTextOverlay() {
+        self.view.addSubview(storyTextOverlay)
+        
+        let safeAreaGuide = self.view.safeAreaLayoutGuide
+        
+        let storyTextOverlayConstraints: [NSLayoutConstraint] = [
+            storyTextOverlay.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 20),
+            storyTextOverlay.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: -20),
+            storyTextOverlay.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 14),
+            storyTextOverlay.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -14),
+        ]
+        NSLayoutConstraint.activate(storyTextOverlayConstraints)
     }
 }
 

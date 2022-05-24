@@ -116,6 +116,7 @@ class CameraView: ARView {
 //            // handle error
 //        }
         
+        
         var sphereMaterial = SimpleMaterial()
         sphereMaterial.metallic = MaterialScalarParameter(floatLiteral: 0.5)
         sphereMaterial.roughness = MaterialScalarParameter(floatLiteral: 0.5)
@@ -133,6 +134,22 @@ class CameraView: ARView {
         sphereAnchor.name = "kuma"
 
         self.scene.addAnchor(sphereAnchor)
+    }
+    
+    private func changeEntityColor(_ entity: Entity, color: UIColor) {
+        if let entity = entity as? ModelEntity {
+            var newMaterial = PhysicallyBasedMaterial()
+            newMaterial.baseColor = PhysicallyBasedMaterial.BaseColor(tint: color, texture: .none)
+            entity.model?.materials = [newMaterial]
+        }
+        
+        if entity.children.isEmpty {
+            return
+        }
+        
+        entity.children.forEach({ childEntity in
+            changeEntityColor(childEntity, color: color)
+        })
     }
     
     private func postProcessARViewFrames(context: ARView.PostProcessContext) {
