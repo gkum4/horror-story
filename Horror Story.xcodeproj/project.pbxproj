@@ -43,7 +43,6 @@
 		B27E57DC283C66090078808E /* semi consciente 5_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57CF283C66080078808E /* semi consciente 5_1-MP3.mp3 */; };
 		B27E57DD283C66090078808E /* demo - eu sei onde vc mora.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57D0283C66090078808E /* demo - eu sei onde vc mora.mp3 */; };
 		B27E57DF283C66A30078808E /* Espirito artomentado 2_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27E57DE283C66A30078808E /* Espirito artomentado 2_1.wav */; };
-		B27E57E1283C6C300078808E /* demo - respiração.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57E0283C6C300078808E /* demo - respiração.mp3 */; };
 		B27E57E3283C6F1C0078808E /* Espirito artomentado 1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27E57E2283C6F1C0078808E /* Espirito artomentado 1_1.wav */; };
 		B2F2590B283B02B90087F4C3 /* HeadphoneOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2590A283B02B90087F4C3 /* HeadphoneOnboardingView.swift */; };
 		B2F25931283C2EBE0087F4C3 /* DistanceIntensityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F25930283C2EBE0087F4C3 /* DistanceIntensityManager.swift */; };
@@ -89,7 +88,6 @@
 		B27E57CF283C66080078808E /* semi consciente 5_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "semi consciente 5_1-MP3.mp3"; sourceTree = "<group>"; };
 		B27E57D0283C66090078808E /* demo - eu sei onde vc mora.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "demo - eu sei onde vc mora.mp3"; sourceTree = "<group>"; };
 		B27E57DE283C66A30078808E /* Espirito artomentado 2_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Espirito artomentado 2_1.wav"; sourceTree = "<group>"; };
-		B27E57E0283C6C300078808E /* demo - respiração.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "demo - respiração.mp3"; path = "../../../Desktop/horror assets/assets wav/mp3/demo - respiração.mp3"; sourceTree = "<group>"; };
 		B27E57E2283C6F1C0078808E /* Espirito artomentado 1_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Espirito artomentado 1_1.wav"; sourceTree = "<group>"; };
 		B2F2590A283B02B90087F4C3 /* HeadphoneOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadphoneOnboardingView.swift; sourceTree = "<group>"; };
 		B2F25930283C2EBE0087F4C3 /* DistanceIntensityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceIntensityManager.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				B27E57CB283C66080078808E /* demo -  vc é meu.mp3 */,
 				B27E57CA283C66080078808E /* demo - eu conheço vc.mp3 */,
 				B27E57E2283C6F1C0078808E /* Espirito artomentado 1_1.wav */,
-				B27E57E0283C6C300078808E /* demo - respiração.mp3 */,
 				B27E57D0283C66090078808E /* demo - eu sei onde vc mora.mp3 */,
 				B27E57DE283C66A30078808E /* Espirito artomentado 2_1.wav */,
 				B27E57C5283C66070078808E /* Espirito artomentado 1_1-MP3.mp3 */,
@@ -322,7 +319,6 @@
 				B21F179A2831CAB00048D58D /* som1.wav in Resources */,
 				B27E57DC283C66090078808E /* semi consciente 5_1-MP3.mp3 in Resources */,
 				B27E57DA283C66090078808E /* semi consciente 1_1-MP3.mp3 in Resources */,
-				B27E57E1283C6C300078808E /* demo - respiração.mp3 in Resources */,
 				B27E57D3283C66090078808E /* Espirito artomentado 3_1-MP3.mp3 in Resources */,
 				B21F17F928332E7E0048D58D /* nooooo.mp3 in Resources */,
 				B27E57DB283C66090078808E /* semi consciente 2_1-MP3.mp3 in Resources */,
@@ -499,7 +495,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
@@ -530,7 +526,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Horror Story/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
