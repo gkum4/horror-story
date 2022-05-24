@@ -35,9 +35,6 @@ class CameraView: ARView {
             self.filtersCIContext = CIContext(mtlDevice: device)
         }
         self.renderCallbacks.postProcess = postProcessARViewFrames
-        
-        
-        loadScene()
     }
     
     @MainActor required dynamic init?(coder decoder: NSCoder) {
@@ -46,6 +43,10 @@ class CameraView: ARView {
     
     @MainActor required dynamic init(frame frameRect: CGRect) {
         fatalError("init(frame:) has not been implemented")
+    }
+    
+    func startHorror() {
+        loadScene()
     }
     
     func applyOldFilm() {
@@ -126,34 +127,16 @@ class CameraView: ARView {
                 print("kumaEntity not found")
                 return
             }
-            var material = SimpleMaterial()
+            
             changeEntityColor(entity, color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.25))
             entities.append(entity)
         }
     }
     
-    private func changeEntityColor(_ entity: Entity, color: UIColor) {
-        if let entity = entity as? ModelEntity {
-            var newMaterial = PhysicallyBasedMaterial()
-            newMaterial.baseColor = PhysicallyBasedMaterial.BaseColor(tint: color, texture: .none)
-            entity.model?.materials = [newMaterial]
-        }
-        
-        if entity.children.isEmpty {
-            return
-        }
-        
-        entity.children.forEach({ childEntity in
-            changeEntityColor(childEntity, color: color)
-        })
-    }
-    
     private func postProcessARViewFrames(context: ARView.PostProcessContext) {
-        for entity in entities {
-            if let currentFrame = self.session.currentFrame {
-                let distanceManager = DistanceIntensityManager(camera: currentFrame.camera, entities: entities)
-                filterHandler.intensity = CGFloat(distanceManager.getHighestValue())
-            }
+        if let currentFrame = self.session.currentFrame {
+            let distanceManager = DistanceIntensityManager(camera: currentFrame.camera, entities: entities)
+            filterHandler.intensity = CGFloat(distanceManager.getHighestValue())
         }
         
         guard let frameImage = CIImage(mtlTexture: context.sourceColorTexture) else {

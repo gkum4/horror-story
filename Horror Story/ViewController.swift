@@ -61,6 +61,8 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
             stopSpeechRecognizer()
             
             storyTextOverlay.removeFromSuperview()
+            
+            cameraView.startHorror()
         }
     }
     
