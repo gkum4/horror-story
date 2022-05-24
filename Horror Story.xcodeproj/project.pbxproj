@@ -33,7 +33,22 @@
 		B21F17F828332E7E0048D58D /* zumbi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F228332E7D0048D58D /* zumbi.mp3 */; };
 		B21F17F928332E7E0048D58D /* nooooo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B21F17F328332E7E0048D58D /* nooooo.mp3 */; };
 		B21F17FD2833D15B0048D58D /* ruido.wav in Resources */ = {isa = PBXBuildFile; fileRef = B21F17FC2833D15B0048D58D /* ruido.wav */; };
+		B27E57D2283C66090078808E /* Espirito artomentado 1_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57C5283C66070078808E /* Espirito artomentado 1_1-MP3.mp3 */; };
+		B27E57D3283C66090078808E /* Espirito artomentado 3_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57C6283C66070078808E /* Espirito artomentado 3_1-MP3.mp3 */; };
+		B27E57D4283C66090078808E /* Espirito artomentado 4_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57C7283C66070078808E /* Espirito artomentado 4_1-MP3.mp3 */; };
+		B27E57D5283C66090078808E /* Espirito artomentado 2_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57C8283C66070078808E /* Espirito artomentado 2_1-MP3.mp3 */; };
+		B27E57D6283C66090078808E /* Espirito artomentado 5_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57C9283C66070078808E /* Espirito artomentado 5_1-MP3.mp3 */; };
+		B27E57D7283C66090078808E /* demo - eu conheço vc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57CA283C66080078808E /* demo - eu conheço vc.mp3 */; };
+		B27E57D8283C66090078808E /* demo -  vc é meu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57CB283C66080078808E /* demo -  vc é meu.mp3 */; };
+		B27E57D9283C66090078808E /* Espirito artomentado 7_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57CC283C66080078808E /* Espirito artomentado 7_1-MP3.mp3 */; };
+		B27E57DA283C66090078808E /* semi consciente 1_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57CD283C66080078808E /* semi consciente 1_1-MP3.mp3 */; };
+		B27E57DB283C66090078808E /* semi consciente 2_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57CE283C66080078808E /* semi consciente 2_1-MP3.mp3 */; };
+		B27E57DC283C66090078808E /* semi consciente 5_1-MP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57CF283C66080078808E /* semi consciente 5_1-MP3.mp3 */; };
+		B27E57DD283C66090078808E /* demo - eu sei onde vc mora.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27E57D0283C66090078808E /* demo - eu sei onde vc mora.mp3 */; };
+		B27E57DF283C66A30078808E /* Espirito artomentado 2_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27E57DE283C66A30078808E /* Espirito artomentado 2_1.wav */; };
+		B27E57E3283C6F1C0078808E /* Espirito artomentado 1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27E57E2283C6F1C0078808E /* Espirito artomentado 1_1.wav */; };
 		B2F2590B283B02B90087F4C3 /* HeadphoneOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2590A283B02B90087F4C3 /* HeadphoneOnboardingView.swift */; };
+		B2F25931283C2EBE0087F4C3 /* DistanceIntensityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F25930283C2EBE0087F4C3 /* DistanceIntensityManager.swift */; };
 		B39142E92832B1C200BDBD89 /* SpeechRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +81,22 @@
 		B21F17F228332E7D0048D58D /* zumbi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zumbi.mp3; sourceTree = "<group>"; };
 		B21F17F328332E7E0048D58D /* nooooo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nooooo.mp3; sourceTree = "<group>"; };
 		B21F17FC2833D15B0048D58D /* ruido.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ruido.wav; sourceTree = "<group>"; };
+		B27E57C5283C66070078808E /* Espirito artomentado 1_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Espirito artomentado 1_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57C6283C66070078808E /* Espirito artomentado 3_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Espirito artomentado 3_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57C7283C66070078808E /* Espirito artomentado 4_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Espirito artomentado 4_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57C8283C66070078808E /* Espirito artomentado 2_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Espirito artomentado 2_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57C9283C66070078808E /* Espirito artomentado 5_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Espirito artomentado 5_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57CA283C66080078808E /* demo - eu conheço vc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "demo - eu conheço vc.mp3"; sourceTree = "<group>"; };
+		B27E57CB283C66080078808E /* demo -  vc é meu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "demo -  vc é meu.mp3"; sourceTree = "<group>"; };
+		B27E57CC283C66080078808E /* Espirito artomentado 7_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Espirito artomentado 7_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57CD283C66080078808E /* semi consciente 1_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "semi consciente 1_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57CE283C66080078808E /* semi consciente 2_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "semi consciente 2_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57CF283C66080078808E /* semi consciente 5_1-MP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "semi consciente 5_1-MP3.mp3"; sourceTree = "<group>"; };
+		B27E57D0283C66090078808E /* demo - eu sei onde vc mora.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "demo - eu sei onde vc mora.mp3"; sourceTree = "<group>"; };
+		B27E57DE283C66A30078808E /* Espirito artomentado 2_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Espirito artomentado 2_1.wav"; sourceTree = "<group>"; };
+		B27E57E2283C6F1C0078808E /* Espirito artomentado 1_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Espirito artomentado 1_1.wav"; sourceTree = "<group>"; };
 		B2F2590A283B02B90087F4C3 /* HeadphoneOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadphoneOnboardingView.swift; sourceTree = "<group>"; };
+		B2F25930283C2EBE0087F4C3 /* DistanceIntensityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceIntensityManager.swift; sourceTree = "<group>"; };
 		B39142E82832B1C200BDBD89 /* SpeechRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +145,20 @@
 				B21F17EE28332E7C0048D58D /* cala boca eu te odeio.mp3 */,
 				B21F17F328332E7E0048D58D /* nooooo.mp3 */,
 				B21F17F028332E7D0048D58D /* respiracao.mp3 */,
+				B27E57CB283C66080078808E /* demo -  vc é meu.mp3 */,
+				B27E57CA283C66080078808E /* demo - eu conheço vc.mp3 */,
+				B27E57E2283C6F1C0078808E /* Espirito artomentado 1_1.wav */,
+				B27E57D0283C66090078808E /* demo - eu sei onde vc mora.mp3 */,
+				B27E57DE283C66A30078808E /* Espirito artomentado 2_1.wav */,
+				B27E57C5283C66070078808E /* Espirito artomentado 1_1-MP3.mp3 */,
+				B27E57C8283C66070078808E /* Espirito artomentado 2_1-MP3.mp3 */,
+				B27E57C6283C66070078808E /* Espirito artomentado 3_1-MP3.mp3 */,
+				B27E57C7283C66070078808E /* Espirito artomentado 4_1-MP3.mp3 */,
+				B27E57C9283C66070078808E /* Espirito artomentado 5_1-MP3.mp3 */,
+				B27E57CC283C66080078808E /* Espirito artomentado 7_1-MP3.mp3 */,
+				B27E57CD283C66080078808E /* semi consciente 1_1-MP3.mp3 */,
+				B27E57CE283C66080078808E /* semi consciente 2_1-MP3.mp3 */,
+				B27E57CF283C66080078808E /* semi consciente 5_1-MP3.mp3 */,
 				B21F17FC2833D15B0048D58D /* ruido.wav */,
 				B21F17F228332E7D0048D58D /* zumbi.mp3 */,
 				0C0EF13F2822AF580067416B /* Assets.xcassets */,
@@ -129,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */,
+				B2F25930283C2EBE0087F4C3 /* DistanceIntensityManager.swift */,
 			);
 			path = ARCameraGeometryManager;
 			sourceTree = "<group>";
@@ -288,15 +333,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27E57E3283C6F1C0078808E /* Espirito artomentado 1_1.wav in Resources */,
 				B21F17F528332E7E0048D58D /* bebe curto.mp3 in Resources */,
 				B21F17F628332E7E0048D58D /* respiracao.mp3 in Resources */,
+				B27E57D2283C66090078808E /* Espirito artomentado 1_1-MP3.mp3 in Resources */,
+				B27E57D8283C66090078808E /* demo -  vc é meu.mp3 in Resources */,
 				B21F17F428332E7E0048D58D /* cala boca eu te odeio.mp3 in Resources */,
+				B27E57DD283C66090078808E /* demo - eu sei onde vc mora.mp3 in Resources */,
 				B21F17F728332E7E0048D58D /* bebe chorando.mp3 in Resources */,
+				B27E57D9283C66090078808E /* Espirito artomentado 7_1-MP3.mp3 in Resources */,
 				B21F179A2831CAB00048D58D /* som1.wav in Resources */,
+				B27E57DC283C66090078808E /* semi consciente 5_1-MP3.mp3 in Resources */,
+				B27E57DA283C66090078808E /* semi consciente 1_1-MP3.mp3 in Resources */,
+				B27E57D3283C66090078808E /* Espirito artomentado 3_1-MP3.mp3 in Resources */,
 				B21F17F928332E7E0048D58D /* nooooo.mp3 in Resources */,
+				B27E57DB283C66090078808E /* semi consciente 2_1-MP3.mp3 in Resources */,
+				B27E57DF283C66A30078808E /* Espirito artomentado 2_1.wav in Resources */,
+				B27E57D5283C66090078808E /* Espirito artomentado 2_1-MP3.mp3 in Resources */,
+				B27E57D6283C66090078808E /* Espirito artomentado 5_1-MP3.mp3 in Resources */,
+				B27E57D7283C66090078808E /* demo - eu conheço vc.mp3 in Resources */,
 				B21F17FD2833D15B0048D58D /* ruido.wav in Resources */,
 				0C0EF1432822AF580067416B /* LaunchScreen.storyboard in Resources */,
 				B21F17F828332E7E0048D58D /* zumbi.mp3 in Resources */,
+				B27E57D4283C66090078808E /* Espirito artomentado 4_1-MP3.mp3 in Resources */,
 				0C0EF1402822AF580067416B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +374,7 @@
 				0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */,
 				0C4CDFE6283830B300A7D670 /* UIControl+.swift in Sources */,
 				0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */,
+				B2F25931283C2EBE0087F4C3 /* DistanceIntensityManager.swift in Sources */,
 				0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */,
 				0C4CDFDD2837C55B00A7D670 /* ARCameraGeometryManager.swift in Sources */,
 				0C4CDFEA283B0A2500A7D670 /* StoryTextOverlayView.swift in Sources */,

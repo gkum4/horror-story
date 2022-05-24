@@ -49,6 +49,7 @@ class ARCameraGeometryManager {
         )
     }
     
+    
     func checkIfIsPointingAtEntity() -> Bool {
         if entityDistanceFromUser > entityDistanceFromDirectionRepresentationPos {
             return true
@@ -66,6 +67,9 @@ class ARCameraGeometryManager {
             return 0
         }
         
+        if entityDistanceFromUser <= 1 {
+            return 1.0
+        }
         return entityDistanceFromUser - entityDistanceFromDirectionRepresentationPos
     }
 }

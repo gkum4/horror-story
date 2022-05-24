@@ -14,6 +14,10 @@ class CameraView: ARView {
     private var filtersCIContext: CIContext?
     private lazy var filterHandler = CameraFilterHandler()
     var headTrackingManager: HeadTrackingManager?
+    let entityNames = ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9"]
+    var entities = [Entity]()
+    
+    private var arCameraGeometryManager: ARCameraGeometryManager?
     
     override init(
         frame frameRect: CGRect,
@@ -109,31 +113,23 @@ class CameraView: ARView {
     }
     
     func loadScene() {
-//        do {
-//            let boxAnchor = try HorrorSceneTest.loadBox()
-//            self.scene.anchors.append(boxAnchor)
-//        } catch {
-//            // handle error
-//        }
+        do {
+            let boxAnchor = try HorrorSceneTest.loadBox()
+            self.scene.anchors.append(boxAnchor)
+            
+        } catch {
+            // handle error
+        }
         
-        
-        var sphereMaterial = SimpleMaterial()
-        sphereMaterial.metallic = MaterialScalarParameter(floatLiteral: 0.5)
-        sphereMaterial.roughness = MaterialScalarParameter(floatLiteral: 0.5)
-        sphereMaterial.color = .init(
-            tint: UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8),
-            texture: nil
-        )
-        let sphereEntity = ModelEntity(
-            mesh: .generateSphere(radius: 0.5),
-            materials: [sphereMaterial]
-        )
-
-        let sphereAnchor = AnchorEntity(world: SIMD3<Float>(1, 1, -2))
-        sphereAnchor.addChild(sphereEntity)
-        sphereAnchor.name = "kuma"
-
-        self.scene.addAnchor(sphereAnchor)
+        for entityName in entityNames {
+            guard let entity = self.scene.findEntity(named: entityName) else {
+                print("kumaEntity not found")
+                return
+            }
+            var material = SimpleMaterial()
+            changeEntityColor(entity, color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.25))
+            entities.append(entity)
+        }
     }
     
     private func changeEntityColor(_ entity: Entity, color: UIColor) {
@@ -153,18 +149,11 @@ class CameraView: ARView {
     }
     
     private func postProcessARViewFrames(context: ARView.PostProcessContext) {
-        if let currentFrame = self.session.currentFrame {
-            guard let kumaEntity = self.scene.findEntity(named: "kuma") else {
-                print("kumaEntity not found")
-                return
+        for entity in entities {
+            if let currentFrame = self.session.currentFrame {
+                let distanceManager = DistanceIntensityManager(camera: currentFrame.camera, entities: entities)
+                filterHandler.intensity = CGFloat(distanceManager.getHighestValue())
             }
-
-            let distanceIntensity = ARCameraGeometryManager(
-                camera: currentFrame.camera,
-                entity: kumaEntity
-            ).getPointingAtEntityIntensity()
-
-            filterHandler.intensity = CGFloat(distanceIntensity)
         }
         
         guard let frameImage = CIImage(mtlTexture: context.sourceColorTexture) else {
@@ -172,7 +161,7 @@ class CameraView: ARView {
         }
         
         let filteredImage = filterHandler.applyFilter(image: frameImage)
-
+        
         // Create a render destination and render the filter to the context's command buffer.
         let destination = CIRenderDestination(
             mtlTexture: context.compatibleTargetTexture,
@@ -185,6 +174,22 @@ class CameraView: ARView {
         }
         
         _ = try? ciContext.startTask(toRender: filteredImage, to: destination)
+    }
+    
+    private func changeEntityColor(_ entity: Entity, color: UIColor) {
+        if let entity = entity as? ModelEntity {
+            var newMaterial = SimpleMaterial()
+            newMaterial.tintColor = color
+            entity.model?.materials = [newMaterial]
+        }
+        
+        if entity.children.isEmpty {
+            return
+        }
+        
+        entity.children.forEach({ childEntity in
+            changeEntityColor(childEntity, color: color)
+        })
     }
 }
 

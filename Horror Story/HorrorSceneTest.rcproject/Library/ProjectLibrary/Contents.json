@@ -33,5 +33,70 @@
     "libraryIdentifier" : "128f3e5e4d35e1cb6ab65d906859177e",
     "format" : "model",
     "displayName" : "Ghost_3d-inktober2019.usdz"
+  },
+  {
+    "libraryIdentifier" : "53208e511e7fa026d1d62311b8e16b04",
+    "format" : "model",
+    "displayName" : "ghost transparente.usdz"
+  },
+  {
+    "libraryIdentifier" : "7e2b85062bb1226ec8fcf9881d9466f2",
+    "format" : "model",
+    "displayName" : "ghost transparente.usdz"
+  },
+  {
+    "libraryIdentifier" : "a655634d82963cbabee3fea4a2320598",
+    "format" : "model",
+    "displayName" : "kkk.usdz"
+  },
+  {
+    "libraryIdentifier" : "866eecaaae0dee640d7d68935d5adbf2",
+    "format" : "audio",
+    "displayName" : "Espirito artomentado 2_1.wav"
+  },
+  {
+    "libraryIdentifier" : "3f4fd10a793fd71a510614708a2af7e1",
+    "format" : "audio",
+    "displayName" : "demo - eu conheço vc.mp3"
+  },
+  {
+    "libraryIdentifier" : "9f04743512fdd2623b248f4ae3644031",
+    "format" : "audio",
+    "displayName" : "demo - eu sei onde vc mora.mp3"
+  },
+  {
+    "libraryIdentifier" : "263d4e73857ac63bba6a47d14743f1de",
+    "format" : "audio",
+    "displayName" : "demo -  vc é meu.mp3"
+  },
+  {
+    "libraryIdentifier" : "935d5d23ed427ec8a8bcd0043a4271ef",
+    "format" : "audio",
+    "displayName" : "Audio 20_1.wav"
+  },
+  {
+    "libraryIdentifier" : "f70e08bc18344d4c951a71c0433de231",
+    "format" : "audio",
+    "displayName" : "semi consciente 2_1-MP3.mp3"
+  },
+  {
+    "libraryIdentifier" : "e96554e179a0c27573f1987e77f98f87",
+    "format" : "audio",
+    "displayName" : "semi consciente 1_1-MP3.mp3"
+  },
+  {
+    "libraryIdentifier" : "faa4a2366721784ec323628bd69aed8e",
+    "format" : "audio",
+    "displayName" : "Espirito artomentado 4_1-MP3.mp3"
+  },
+  {
+    "libraryIdentifier" : "f980e4dfe9bb24d3458aedf7af452a6c",
+    "format" : "audio",
+    "displayName" : "Espirito artomentado 1_1.wav"
+  },
+  {
+    "libraryIdentifier" : "2928bee42a9d6207c71a97fbef3562d2",
+    "format" : "audio",
+    "displayName" : "Espirito artomentado 7_1-MP3.mp3"
   }
 ]
