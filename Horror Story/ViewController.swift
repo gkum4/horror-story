@@ -26,6 +26,12 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
         storyTextOverlayView.translatesAutoresizingMaskIntoConstraints = false
         return storyTextOverlayView
     }()
+    private lazy var headphoneOnboarding: HeadPhoneOnboardingView = {
+        let headphoneOnboardingView = HeadPhoneOnboardingView()
+        headphoneOnboardingView.button.addAction(for: .touchUpInside, headphonesUnderstoodPress)
+        headphoneOnboardingView.translatesAutoresizingMaskIntoConstraints = false
+        return headphoneOnboardingView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +52,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     }
     
     private func stopSpeechRecognizer() {
-        do {
-            try speechRecognizer.audioEngine.stop()
-        } catch {
-            print("Error initializing speech recognizer recording")
-        }
+        speechRecognizer.audioEngine.stop()
     }
     
     func speechCallback(speech: String) {
@@ -74,21 +76,44 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
             self.onboardingWarning.removeFromSuperview()
             
             self.view.addSubview(self.cameraView)
-            self.storyTextOverlay.alpha = 0
-            self.setupStoryTextOverlay()
+            
+            self.headphoneOnboarding.alpha = 0
+            self.view.addSubview(self.headphoneOnboarding)
+            self.setupHeadphoneOnboarding()
+            
             UIView.animate(withDuration: 1, animations: {
-                self.storyTextOverlay.alpha = 1
+                self.headphoneOnboarding.alpha = 1
             }, completion: { _ in
                 self.startSpeechRecognizer()
             })
         })
-        
-        
+    }
+    
+    func headphonesUnderstoodPress() {
+        UIView.animate(withDuration: 1, animations: {
+            self.headphoneOnboarding.alpha = 0
+        }, completion: { _ in
+            self.headphoneOnboarding.removeFromSuperview()
+            
+            self.storyTextOverlay.alpha = 0
+            self.view.addSubview(self.storyTextOverlay)
+            self.setupStoryTextOverlay()
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.storyTextOverlay.alpha = 1
+            }, completion: nil)
+        })
+    }
+    
+    func setupHeadphoneOnboarding() {
+        let headphoneOnboardinConstraints: [NSLayoutConstraint] = [
+            headphoneOnboarding.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            headphoneOnboarding.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+        ]
+        NSLayoutConstraint.activate(headphoneOnboardinConstraints)
     }
     
     func setupStoryTextOverlay() {
-        self.view.addSubview(storyTextOverlay)
-        
         let safeAreaGuide = self.view.safeAreaLayoutGuide
         
         let storyTextOverlayConstraints: [NSLayoutConstraint] = [

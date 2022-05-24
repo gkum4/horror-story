@@ -67,7 +67,7 @@ class HeadPhoneOnboardingView: UIView {
         addSubview(stackView)
         self.layer.cornerRadius = 15
         self.layer.masksToBounds = true
-        self.backgroundColor = .black
+        self.backgroundColor = .init(red: 0, green: 0, blue: 0, alpha: 0.7)
         self.layer.opacity = 0.75
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -85,11 +85,6 @@ class HeadPhoneOnboardingView: UIView {
         stackView.addArrangedSubview(spacer)
         stackView.addArrangedSubview(headPhonesImage)
         stackView.addArrangedSubview(button)
-        button.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
-    }
-    
-    @objc func buttonPressed(sender: UIButton) {
-        self.removeFromSuperview()
     }
     
     required init?(coder: NSCoder) {
