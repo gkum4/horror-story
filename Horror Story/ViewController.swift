@@ -16,13 +16,13 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
     )
     private lazy var label: UILabel = {
         let uiLabel = UILabel()
-        uiLabel.text = "Diga: \"Eu quero contato\""
+//        uiLabel.text = "Diga: \"Eu quero contato\""
         uiLabel.font = .systemFont(ofSize: 18)
         return uiLabel
     }()
     private lazy var exitLabel: UILabel = {
         let uiLabel = UILabel()
-        uiLabel.text = "Diga: \"Eu quero sair\" para voltar"
+//        uiLabel.text = "Diga: \"Eu quero sair\" para voltar"
         uiLabel.font = .systemFont(ofSize: 18)
         return uiLabel
     }()
