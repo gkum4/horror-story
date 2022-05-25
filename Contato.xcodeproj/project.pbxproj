@@ -14,10 +14,10 @@
 		0C0EF1432822AF580067416B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EF1412822AF580067416B /* LaunchScreen.storyboard */; };
 		0C25BAC2282D482000032D1A /* CameraFilterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */; };
 		0C4CDFDD2837C55B00A7D670 /* ARCameraGeometryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */; };
-		0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */; };
 		0C4CDFE42837DD0100A7D670 /* OnboardingWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */; };
 		0C4CDFE6283830B300A7D670 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE5283830B300A7D670 /* UIControl+.swift */; };
 		0C4CDFEA283B0A2500A7D670 /* StoryTextOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFE9283B0A2500A7D670 /* StoryTextOverlayView.swift */; };
+		0C4CDFED283BBE7F00A7D670 /* StoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */; };
 		0CB34BE12832C75F0046F4DC /* RealityKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34BE02832C75F0046F4DC /* RealityKit+.swift */; };
 		0CB34C082833178A0046F4DC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C072833178A0046F4DC /* CameraView.swift */; };
 		0CB34C10283321860046F4DC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */; };
@@ -53,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C0EF1332822AF560067416B /* Horror Story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Horror Story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0EF1332822AF560067416B /* Contato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C0EF1362822AF560067416B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C0EF1382822AF560067416B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0C0EF13A2822AF560067416B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +62,10 @@
 		0C0EF1442822AF580067416B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C25BAC1282D482000032D1A /* CameraFilterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterHandler.swift; sourceTree = "<group>"; };
 		0C4CDFDC2837C55B00A7D670 /* ARCameraGeometryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraGeometryManager.swift; sourceTree = "<group>"; };
-		0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProgress.swift; sourceTree = "<group>"; };
 		0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWarningView.swift; sourceTree = "<group>"; };
 		0C4CDFE5283830B300A7D670 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
 		0C4CDFE9283B0A2500A7D670 /* StoryTextOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTextOverlayView.swift; sourceTree = "<group>"; };
+		0C4CDFEC283BBE7F00A7D670 /* StoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProgress.swift; sourceTree = "<group>"; };
 		0CB34BE02832C75F0046F4DC /* RealityKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityKit+.swift"; sourceTree = "<group>"; };
 		0CB34C072833178A0046F4DC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0CB34C0F283321860046F4DC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		0C0EF12A2822AF560067416B = {
 			isa = PBXGroup;
 			children = (
-				0C0EF1352822AF560067416B /* Horror Story */,
+				0C0EF1352822AF560067416B /* Contato */,
 				0C0EF1342822AF560067416B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,12 +122,12 @@
 		0C0EF1342822AF560067416B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C0EF1332822AF560067416B /* Horror Story.app */,
+				0C0EF1332822AF560067416B /* Contato.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C0EF1352822AF560067416B /* Horror Story */ = {
+		0C0EF1352822AF560067416B /* Contato */ = {
 			isa = PBXGroup;
 			children = (
 				B2F25909283B028A0087F4C3 /* Scenes */,
@@ -165,10 +165,9 @@
 				0C0EF1412822AF580067416B /* LaunchScreen.storyboard */,
 				0C0EF1442822AF580067416B /* Info.plist */,
 			);
-			path = "Horror Story";
+			path = Contato;
 			sourceTree = "<group>";
 		};
-
 		0C4CDFDB2837C53D00A7D670 /* ARCameraGeometryManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,20 +177,20 @@
 			path = ARCameraGeometryManager;
 			sourceTree = "<group>";
 		};
-		0C4CDFE8283B0A0F00A7D670 /* StoryTextOverlayView */ = {
-			isa = PBXGroup;
-			children = (
-				0C4CDFE9283B0A2500A7D670 /* StoryTextOverlayView.swift */,
-			);
-			path = StoryTextOverlayView;
-			sourceTree = "<group>";
-		};
 		0C4CDFE12837DCE100A7D670 /* OnboardingWarningView */ = {
 			isa = PBXGroup;
 			children = (
 				0C4CDFE32837DD0100A7D670 /* OnboardingWarningView.swift */,
 			);
 			path = OnboardingWarningView;
+			sourceTree = "<group>";
+		};
+		0C4CDFE8283B0A0F00A7D670 /* StoryTextOverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CDFE9283B0A2500A7D670 /* StoryTextOverlayView.swift */,
+			);
+			path = StoryTextOverlayView;
 			sourceTree = "<group>";
 		};
 		0C4CDFEB283BBE7300A7D670 /* StoryProgress */ = {
@@ -278,9 +277,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C0EF1322822AF560067416B /* Horror Story */ = {
+		0C0EF1322822AF560067416B /* Contato */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C0EF1472822AF580067416B /* Build configuration list for PBXNativeTarget "Horror Story" */;
+			buildConfigurationList = 0C0EF1472822AF580067416B /* Build configuration list for PBXNativeTarget "Contato" */;
 			buildPhases = (
 				0C0EF12F2822AF560067416B /* Sources */,
 				0C0EF1302822AF560067416B /* Frameworks */,
@@ -290,9 +289,9 @@
 			);
 			dependencies = (
 			);
-			name = "Horror Story";
+			name = Contato;
 			productName = "Horror Story";
-			productReference = 0C0EF1332822AF560067416B /* Horror Story.app */;
+			productReference = 0C0EF1332822AF560067416B /* Contato.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -310,7 +309,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0C0EF12E2822AF560067416B /* Build configuration list for PBXProject "Horror Story" */;
+			buildConfigurationList = 0C0EF12E2822AF560067416B /* Build configuration list for PBXProject "Contato" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -323,7 +322,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C0EF1322822AF560067416B /* Horror Story */,
+				0C0EF1322822AF560067416B /* Contato */,
 			);
 		};
 /* End PBXProject section */
@@ -526,9 +525,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Horror Story/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
+				INFOPLIST_FILE = Contato/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Contato;
+				INFOPLIST_KEY_NSCameraUsageDescription = "necessario para ar";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "necessario para rastrear cabeça";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -540,7 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kuma.Horror-Story";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuma.Contato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,9 +558,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Horror Story/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Câmera é utilizada para forncer a experiência imersiva";
+				INFOPLIST_FILE = Contato/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Contato;
+				INFOPLIST_KEY_NSCameraUsageDescription = "necessario para ar";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "necessario para rastrear cabeça";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -571,7 +574,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kuma.Horror-Story";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuma.Contato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -582,7 +585,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C0EF12E2822AF560067416B /* Build configuration list for PBXProject "Horror Story" */ = {
+		0C0EF12E2822AF560067416B /* Build configuration list for PBXProject "Contato" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C0EF1452822AF580067416B /* Debug */,
@@ -591,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C0EF1472822AF580067416B /* Build configuration list for PBXNativeTarget "Horror Story" */ = {
+		0C0EF1472822AF580067416B /* Build configuration list for PBXNativeTarget "Contato" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C0EF1482822AF580067416B /* Debug */,
