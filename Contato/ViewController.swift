@@ -62,6 +62,7 @@ class ViewController: UIViewController, SpeechRecognizerDelegate {
             
             storyTextOverlay.removeFromSuperview()
             
+            NoiseSoundPlayer.shared.startSound()
             cameraView.startHorror()
         }
     }
