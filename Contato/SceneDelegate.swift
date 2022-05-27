@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //2
         window?.windowScene = windowScene
         //3
-        window?.rootViewController = ViewController()
+        window?.rootViewController = StartViewController()
         //4
         window?.makeKeyAndVisible()
     }
